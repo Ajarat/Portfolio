@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Images
+import kitchensink from '../../images/eds-kitchen-sink-mockup.png';
+import vacationyou from '../../images/vacation-you.png';
+import headersbuttons from '../../images/headers-buttons.png';
+---
+
+<Layout title="The Evolve Design System">
+	<main>
+		<h1>The Evolve <span class="text-gradient">Design System</span></h1>
+
+		<img src={kitchensink} width="100%" alt="Evolve Design System Kitchen Sink" />
+		<p class="img-alt">Kitchen sink view of both light mode and dark mode components on desktop and mobile.</p>
+
+		<h2>Be Efficient</h2>
+		<p>Tasked with leading the design of a comprehensive design system during Evolve's rebrand, I aimed to establish reusable components, guidelines, and design principles. This system reinforces our brand identity, improves accessibility, and empowers collaborative and efficient workflows for our designers and developers.</p>
+		
+		<img src={vacationyou} width="100%" alt="Evolve Rebrand Examples" />
+		<p class="img-alt">Some examples from our instagram feed of the recent Evolve rebrand.</p>
+
+		<h3>Make Vacation Rental Easy for Everyone</h3>
+		<p>Evolve is a vacation rental management company, similar to Airbnb, that offers a direct sales platform and handles guest interactions. They provide property owners with comprehensive services, including marketing, bookings, and guest communication, to optimize rental income and deliver exceptional experiences. With a customer-centric approach and an extensive network of rental properties, Evolve streamlines the vacation rental process for both owners and guests.</p>
+		<p>Alongside considering diverse user groups, we are also migrating all our applications to React. This transition further supports the need for an extensive design system.</p>
+
+		<img src={headersbuttons} width="100%" alt="Example slides of some of our mobile headers and button components." />
+		<p class="img-alt">Example slides of some of our mobile headers and button components.</p>
+
+		<h3>My Role</h3>
+		<p>Building the design system alongside the rebranding effort posed unique challenges due to the absence of tested mockups. We had to establish a cohesive visual language from scratch, requiring meticulous planning and iterative design processes.</p>
+		<p>As the lead designer, I worked alongside two junior designers and collaborated with the entire experience design team to develop the design system. Their continuous support and collaboration provided valuable pressure-testing and diverse perspectives.</p>
+		<p>We built components and styles in Figma, collaborating with developers to create the component library. We prioritized accessibility, ensuring components met WCAG 2.0 AA standards. Usage guidelines were documented in Zeroheight, providing a comprehensive reference for designers, developers, and marketing.</p>
+
+		<h3>Goals and Challenges</h3>
+		<p>Our project aimed to achieve three main goals: improving accessibility across all applications, enhancing design and development workflows, and establishing a consistent design language. We addressed accessibility issues in our e-commerce site and owner-facing applications, prioritizing the older demographic's needs. Simultaneously, we streamlined workflows for greater efficiency. By focusing on these objectives, we aimed to create a more inclusive and user-friendly experience for all stakeholders.</p>
+		<p>Our normal process had several challenges, including the reliance on overseas contractors for development, necessitating a fast and efficient approach to building and launching new applications. Additionally, we aimed to establish consistency across our experiences to foster customer trust. Despite a strong design team, the sheer number of apps to maintain stretched our resources thin, making it challenging to maintain design consistency across all applications.</p>
+
+		<h3>Our Process</h3>
+		<p>Without a dedicated development resource, we had to develop the token system midway through the project. As the rebranding efforts were being finalized, we underwent multiple iterations to align our designs with the evolving brand identity. Despite these challenges, our iterative approach enabled us to adapt and refine our designs, ensuring they accurately represented the final rebranding vision.</p>
+		<p>To ensure component quality, we held weekly "Designathons" where the Experience Design team incorporated new components into existing mockups. This collaborative process validated seamless integration across applications, addressing stakeholder needs. By involving the Experience Design team early on, we accounted for necessary component variations, fostering a cohesive user experience across our apps.</p>
+
+		<h3>The Solution</h3>
+		<p>We utilized Figma to build all of our components, including <strong>both light and dark mode</strong> versions. With a total of <strong>50 unique components and thousands of variations</strong>, we ensured a versatile and comprehensive design system. Our development team employed Tailwind for styling, which served as the foundation for many of our tokens. We utilized Storybook as our living style guide and incorporated Radix to enhance accessibility. To provide clear guidelines and reference materials, we documented all usage guidelines in Zeroheight, making them accessible to the entire company.</p>
+
+		<h3>Current Challenges and Future Considerations</h3>
+		<p>Initially, finding an app team for the design system adoption was challenging, hindering real-life testing. However, we partnered with a team redesigning the owner account web app. As consultants, we actively participated in their scrum ceremonies, addressing component variations and adjustments. The teams synchronized efforts, enabling a smooth development process. We also introduced guest and owner variations to align with distinct app color schemes, ensuring differentiation.</p>
+		<p>In the future, we aim to involve our Marketing team as contributors to our usage guidelines in Zeroheight. We plan to conduct user testing and A/B testing once the implementation progresses, aiming for success and buy-in from other teams. Expanding our design system and securing resources for future implementations will be driven by data and positive results.</p>
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+		margin: auto;
+		padding: 80px 0;
+		max-width: 70ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 500;
+		margin: 0 0 40px 0;
+	}
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 500;
+		margin: 3rem 0 1rem 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	p {
+		&.img-alt {
+			font-weight: 300;
+			font-style: italic;
+			font-size: 0.875rem;
+			text-align: center;
+		}
+	}
+</style>

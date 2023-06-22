@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.4.1"
+    "@fontsource/barlow": "^5.0.2",
+    "@fontsource/twinkle-star": "^5.0.2",
+    "astro": "^2.4.1",
+    "sass": "^1.63.3"
   }
 }
