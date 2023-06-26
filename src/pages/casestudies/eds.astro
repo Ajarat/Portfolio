@@ -5,6 +5,9 @@ import Layout from '../../layouts/Layout.astro';
 import kitchensink from '../../images/eds-kitchen-sink-mockup.png';
 import vacationyou from '../../images/vacation-you.png';
 import headersbuttons from '../../images/headers-buttons.png';
+import calendarpopover from '../../images/calendar-popover.png';
+import chipstripdates from '../../images/chips-tripdates.png';
+import buttonstables from '../../images/buttons-tables.png';
 ---
 
 <Layout title="The Evolve Design System">
@@ -30,15 +33,24 @@ import headersbuttons from '../../images/headers-buttons.png';
 		<h3>My Role</h3>
 		<p>Building the design system alongside the rebranding effort posed unique challenges due to the absence of tested mockups. We had to establish a cohesive visual language from scratch, requiring meticulous planning and iterative design processes.</p>
 		<p>As the lead designer, I worked alongside two junior designers and collaborated with the entire experience design team to develop the design system. Their continuous support and collaboration provided valuable pressure-testing and diverse perspectives.</p>
-		<p>We built components and styles in Figma, collaborating with developers to create the component library. We prioritized accessibility, ensuring components met WCAG 2.0 AA standards. Usage guidelines were documented in Zeroheight, providing a comprehensive reference for designers, developers, and marketing.</p>
+		<p>We built components and styles in <strong>Figma</strong>, collaborating with developers to create the component library. We prioritized accessibility, ensuring components met <strong>WCAG 2.0 AA</strong> standards. Usage guidelines were documented in <strong>Zeroheight</strong>, providing a comprehensive reference for designers, developers, and marketing.</p>
+
+		<img src={chipstripdates} width="100%" alt="Examples of component variants for 'Chips' and 'Trip Date Inputs.'" />
+		<p class="img-alt">Example slides of component variants for 'Chips' and 'Trip Date Inputs.'</p>
 
 		<h3>Goals and Challenges</h3>
-		<p>Our project aimed to achieve three main goals: improving accessibility across all applications, enhancing design and development workflows, and establishing a consistent design language. We addressed accessibility issues in our e-commerce site and owner-facing applications, prioritizing the older demographic's needs. Simultaneously, we streamlined workflows for greater efficiency. By focusing on these objectives, we aimed to create a more inclusive and user-friendly experience for all stakeholders.</p>
+		<p>Our project aimed to achieve three main goals: <strong>improving accessibility</strong> across all applications, <strong>enhancing design and development workflows</strong>, and <strong>establishing a consistent design language</strong>. We addressed accessibility issues in our e-commerce site and owner-facing applications, prioritizing the older demographic's needs. Simultaneously, we streamlined workflows for greater efficiency. By focusing on these objectives, we aimed to create a more inclusive and user-friendly experience for all stakeholders.</p>
 		<p>Our normal process had several challenges, including the reliance on overseas contractors for development, necessitating a fast and efficient approach to building and launching new applications. Additionally, we aimed to establish consistency across our experiences to foster customer trust. Despite a strong design team, the sheer number of apps to maintain stretched our resources thin, making it challenging to maintain design consistency across all applications.</p>
+
+		<img src={calendarpopover} width="100%" class="margin-top-16" alt="Our popover with trip date calendar for trip date selections." />
+		<p class="img-alt">Our popover with trip date calendar for trip date selections.</p>
 
 		<h3>Our Process</h3>
 		<p>Without a dedicated development resource, we had to develop the token system midway through the project. As the rebranding efforts were being finalized, we underwent multiple iterations to align our designs with the evolving brand identity. Despite these challenges, our iterative approach enabled us to adapt and refine our designs, ensuring they accurately represented the final rebranding vision.</p>
 		<p>To ensure component quality, we held weekly "Designathons" where the Experience Design team incorporated new components into existing mockups. This collaborative process validated seamless integration across applications, addressing stakeholder needs. By involving the Experience Design team early on, we accounted for necessary component variations, fostering a cohesive user experience across our apps.</p>
+
+		<img src={buttonstables} width="100%" alt="Examples of component variants for 'Buttons' and 'Table' elements." />
+		<p class="img-alt">Examples of component variants for 'Buttons' and Table elements.</p>
 
 		<h3>The Solution</h3>
 		<p>We utilized Figma to build all of our components, including <strong>both light and dark mode</strong> versions. With a total of <strong>50 unique components and thousands of variations</strong>, we ensured a versatile and comprehensive design system. Our development team employed Tailwind for styling, which served as the foundation for many of our tokens. We utilized Storybook as our living style guide and incorporated Radix to enhance accessibility. To provide clear guidelines and reference materials, we documented all usage guidelines in Zeroheight, making them accessible to the entire company.</p>
@@ -64,6 +76,11 @@ import headersbuttons from '../../images/headers-buttons.png';
 		font-size: 2.5rem;
 		font-weight: 500;
 		margin: 3rem 0 1rem 0;
+	}
+	h3 {
+		font-size: 1.75rem;
+		font-weight: 500;
+		margin: 2rem 0 1rem 0;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
