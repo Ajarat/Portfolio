@@ -43,4 +43,39 @@ const { title } = Astro.props;
 	.margin-top-16 {
 		margin-top: 1rem;
 	}
+	.margin-top-24 {
+		margin-top: 1.5rem;
+	}
+	.margin-top-48 {
+		margin-top: 3rem;
+	}
+
+	.align-center {
+		text-align: center;
+	}
+
+	a.button{
+		display: inline-block;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 1.125rem 1.5em;
+		vertical-align: middle;
+		border: none;
+		border-radius: 10rem;
+		background-color: #6457a6;
+		font-family:'Barlow', sans-serif;
+		font-size: 1.125;
+		font-weight: 500;
+		text-decoration: none;
+		color: #fff;
+		text-align: center;
+		transition: all 0.2s;
+
+		&:hover{
+			background-color: #43387e;
+		}
+		&:active{
+			background-color: #8f81d7;
+		}
+	}
 </style>
