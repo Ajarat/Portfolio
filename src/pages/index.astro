@@ -1,103 +1,102 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+// Images
+import mjclogo from '../images/mjc-logo.svg';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<div class="logo">
+			<img src={mjclogo} alt="Logo for MJC" />
+		</div>
+
+		<h1>Hiya! I'm <strong>Morgan Cadow</strong>. I'm an <span class="text-gradient">Experience Designer</span> based in Denver.</h1>
+
+		<p class="subtitle">I love building design systems and data-rich interfaces.</p>
+
+		<div class="align-center margin-top-24">
+			<a href="https://drive.google.com/file/d/1eosDSQRjtbyvPLkPv8jIfjph8f1LIRer/view?usp=sharing" class="button" target="_blank">Download my resume</a>
+		</div>
+
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			I’m currently redesigning my site. If you would like to read some of the <strong>Case Studies</strong> for my recent work, have a work inquiry, or just want to chat drop me a line at <a href="mailto:morgan@ajarat.io">morgan@ajarat.io</a>.
+			<br /><br />
+			Thanks for stopping by!
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
 	</main>
 </Layout>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width=500px>
-	<!-- Body -->
-	<path d="M100 170 L150 100 L100 30 L50 100 Z" fill="#FFB100" />
-	
-	<!-- Face -->
-	<path d="M100 120 C100 120, 60 80, 100 60 C140 80, 100 120, 100 120 Z" fill="#FFD700" />
-	
-	<!-- Eyes -->
-	<circle cx="75" cy="85" r="10" fill="#FFFFFF" />
-	<circle cx="125" cy="85" r="10" fill="#FFFFFF" />
-	
-	<!-- Pupils -->
-	<circle cx="77" cy="85" r="4" fill="#000000" />
-	<circle cx="123" cy="85" r="4" fill="#000000" />
-	
-	<!-- Ears -->
-	<path d="M50 55 C60 40, 90 30, 95 40" fill="#FFB100" />
-	<path d="M150 55 C140 40, 110 30, 105 40" fill="#FFB100" />
-	
-	<!-- Nose -->
-	<path d="M95 100 Q100 120 105 100" fill="#FFD700" />
-	
-	<!-- Mouth -->
-	<path d="M95 100 C100 110, 100 110, 105 100" fill="none" stroke="#000000" />
-  </svg>
+<!--
+	<ul role="list" class="link-card-grid">
+		<Card
+			href="https://astro.build/integrations/"
+			title="Integrations"
+			body="Supercharge your project with new frameworks and libraries."
+		/>
+		<Card
+			href="https://astro.build/themes/"
+			title="Themes"
+			body="Explore a galaxy of community-built starter themes."
+		/>
+		<Card
+			href="https://astro.build/chat/"
+			title="Community"
+			body="Come say hi to our amazing Discord community. ❤️"
+		/>
+	</ul>
+-->
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+<style lang="scss">
+	.logo {
+		text-align: center;
+
+		img {
+			width: 150px;
+		}
 	}
 	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+		margin: 1.5rem 0 0.75rem 0;
+		font-size: 1.75rem;
+		text-align: center;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	.subtitle {
+		font-size: 1.25rem;
+		text-align: center;
 	}
 	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
+		margin: 1.5rem 0;
+		padding: 1.5rem;
 		border-radius: 0.4rem;
+		border: 4px solid rgba(255, 208, 133, 1);
+		background-color: rgba(255, 208, 133, 0.3);
+		font-size: 1.25rem;
+		line-height: 1.25;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+
+	@media only screen and (min-width: 768px) {
+		.logo {
+
+			img {
+				width: 200px;
+			}
+		}
+		h1 {
+			margin: 2rem 0 1rem 0;
+			font-size: 2.5rem;
+		}
+		.subtitle {
+			font-size: 1.5rem;
+		}
+		.instructions {
+			margin: 2rem 0;
+			padding: 2rem;
+			font-size: 1.25rem;
+			line-height: 1.6;
+		}
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
+
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));

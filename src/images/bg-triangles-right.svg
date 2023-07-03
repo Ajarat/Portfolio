@@ -1,0 +1,26 @@
+<svg width="186" height="479" viewBox="0 0 186 479" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_406_78)">
+<g clip-path="url(#clip1_406_78)">
+<path d="M62 479L-2.09378e-06 431.1L62 383.2L62 479Z" fill="#EE9ECF"/>
+<path d="M62 383.2L-2.09378e-06 335.3L62 287.4L62 383.2Z" fill="#EE9ECF"/>
+<path d="M62 287.4L-2.09377e-06 239.5L62 191.6L62 287.4Z" fill="#EE9ECF"/>
+<path d="M62 191.6L-2.09378e-06 143.7L62 95.8001L62 191.6Z" fill="#EE9ECF"/>
+<path d="M124 431.1L62 383.2L124 335.3L124 431.1Z" fill="#EE9ECF"/>
+<path d="M124 335.3L62 287.4L124 239.5L124 335.3Z" fill="#EE9ECF"/>
+<path d="M124 239.5L62 191.6L124 143.7L124 239.5Z" fill="#EE9ECF"/>
+<path d="M124 143.7L62 95.8002L124 47.9002L124 143.7Z" fill="#EE9ECF"/>
+<path d="M186 383.2L124 335.3L186 287.4L186 383.2Z" fill="#EE9ECF"/>
+<path d="M186 287.4L124 239.5L186 191.6L186 287.4Z" fill="#EE9ECF"/>
+<path d="M186 191.6L124 143.7L186 95.7998L186 191.6Z" fill="#EE9ECF"/>
+<path d="M186 95.7998L124 47.8998L186 -0.000159224L186 95.7998Z" fill="#EE9ECF"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_406_78">
+<rect width="186" height="479" fill="white"/>
+</clipPath>
+<clipPath id="clip1_406_78">
+<rect width="479" height="186" fill="white" transform="translate(0 479) rotate(-90)"/>
+</clipPath>
+</defs>
+</svg>

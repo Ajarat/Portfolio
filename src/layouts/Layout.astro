@@ -4,6 +4,9 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+import bgcircleleft from '../images/bg-circle-left.svg';
+import bgtrianglesright from '../images/bg-triangles-right.svg';
 ---
 
 <!DOCTYPE html>
@@ -24,8 +27,8 @@ const { title } = Astro.props;
 	@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,500;1,300&display=swap');
 
 	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--accent: 100, 87, 166;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #a578b9 20%);
 	}
 	html {
 		font-family: 'Barlow', sans-serif;
@@ -35,9 +38,72 @@ const { title } = Astro.props;
 	code {
 		font-family: 'Barlow', sans-serif;
 	}
+
 	main {
-		max-width: 1040px;
-		padding: 0;
+		margin: auto;
+		padding: 2.25rem 1.25rem;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	h1 {
+		font-size: 2.25rem;
+		font-weight: 500;
+		margin: 0 0 2rem 0;
+	}
+	h2 {
+		font-size: 1.75rem;
+		font-weight: 500;
+		margin: 2rem 0 1rem 0;
+	}
+	h3 {
+		font-size: 1.25rem;
+		font-weight: 500;
+		margin: 2rem 0 1rem 0;
+	}
+	a {
+		font-weight: 500;
+		text-decoration: none;
+		color: rgb(var(--accent));
+		transition: all 0.2s;
+
+		&:hover {
+			text-decoration: underline;
+			color: #43387e;
+		}
+		&:active{
+			color: #8f81d7;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		body {
+			margin: 0;
+			background-image: url(../images/bg-circle-left.svg), url(../images/bg-triangles-right.svg);
+			background-position: left center, right top;
+			background-repeat: no-repeat, no-repeat;
+		}
+		main {
+			margin: auto;
+			padding: 5rem 0;
+			max-width: 70ch;
+		}
+		h1 {
+			font-size: 3rem;
+			margin: 0 0 2.5rem 0;
+		}
+		h2 {
+			font-size: 2.5rem;
+			margin: 3rem 0 1rem 0;
+		}
+		h3 {
+			font-size: 1.75rem;
+			margin: 2rem 0 1rem 0;
+		}
 	}
 
 	.margin-top-16 {
@@ -54,7 +120,7 @@ const { title } = Astro.props;
 		text-align: center;
 	}
 
-	a.button{
+	a.button {
 		display: inline-block;
 		box-sizing: border-box;
 		margin: 0;
