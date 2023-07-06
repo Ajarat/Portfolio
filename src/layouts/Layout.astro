@@ -79,12 +79,53 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 			color: #8f81d7;
 		}
 	}
+	img {
+		margin-top: 1rem;
+	}
+	p {
+		&.img-alt {
+			font-weight: 300;
+			font-style: italic;
+			font-size: 0.875rem;
+			text-align: center;
+		}
+	}
+	.text-large {
+		font-size: 1.25rem;
+	}
+	.text-large-italic {
+		font-size: 1.25rem;
+		font-weight: 300;
+		font-style: italic;
+	}
+	hr {
+		border: 0;
+		height: 1px;
+		width: 20%;
+		position: relative;
+		margin: 30px auto;
+		background: #EE9ECF;
+
+		&:before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			background: #EE9ECF;
+			display: block;
+			border: 2px solid #EE9ECF;
+			border-radius: 0;
+			position: absolute;
+			top: -4px;
+			left: 50%;
+			margin: 0 0 0 -3px;
+		}
+	}
 
 	@media only screen and (min-width: 768px) {
 		body {
 			margin: 0;
 			background-image: url(../images/bg-circle-left.svg), url(../images/bg-swirl.svg), url(../images/bg-triangles-right.svg);
-			background-position: left center, center 15%, right top;
+			background-position: left 270px, center 120px, right top;
 			background-repeat: no-repeat, no-repeat, no-repeat;
 		}
 		main {
