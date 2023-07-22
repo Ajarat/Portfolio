@@ -4,6 +4,7 @@ import { defineMiddleware } from "astro/middleware";
 const VALID_USERNAME = 'mjc'
 const VALID_PASSWORD = 'designs'
 
+
 export const onRequest = defineMiddleware((context, next) => {
 
     const { url, headers } = context.request
