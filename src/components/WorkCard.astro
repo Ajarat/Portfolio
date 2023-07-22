@@ -1,0 +1,137 @@
+---
+import Button from '../components/Button.astro';
+
+export interface Props {
+	img: string;
+	alt: string;
+	title: string;
+	body: string;
+	href: string;
+	target: string;
+	text: string;
+}
+
+const { img, alt, title, body, href, target, text } = Astro.props;
+
+---
+
+<div class="work-card">
+	<img src={img} width="100%" alt={alt} />
+	<div>
+		<div>
+			<h4>
+				{title}
+			</h4>
+			<p>
+				{body}
+			</p>
+		</div>
+		<Button
+			href={href}
+			target={target}
+			text={text}
+		/>
+	</div>
+</div>
+
+<style lang="scss">
+
+	// Colors
+	$white: #fff;
+	$black: #353535;
+
+	$enabled: #6457a6;
+	$hover: #43387e;
+	$active: #8f81d7;
+
+	.work-card {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 2rem;
+
+		& > div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		img {
+			width: 100%;
+			margin: 0;
+		}
+		h4 {
+			margin-block-start: 1rem;
+			margin-block-end: 1rem;
+			font-size: 1.5rem;
+			font-weight: 300;
+		}
+		p {
+			margin: 0 0 1.5rem 0;
+			font-size: .875rem;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		.work-card {
+
+			& > div {
+				display: block;
+			}
+
+			img {
+				max-width: 500px;
+				margin: auto;
+			}
+			h4 {
+				margin-block-start: 1.5rem;
+				margin-block-end: 1.5rem;
+				font-size: 1.75rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		.work-card {
+			flex-direction: row;
+
+			& > div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			img {
+				margin-right: 2rem;
+			}
+			h4 {
+				margin-block-start: 0;
+			}
+			p {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1260px) {
+
+		.work-card {
+
+			img {
+				max-width: 550px;
+				margin-right: 3rem;
+			}
+			h4 {
+				margin-block-start: 1rem;
+			}
+			p {
+				font-size: 1.125rem;
+			}
+		}
+	}
+</style>

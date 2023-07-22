@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
 
 // Images
 import kitchensink from '../../images/eds-kitchen-sink-mockup.png';
@@ -15,15 +16,19 @@ import dialogsselectors from '../../images/dialogs-selectors.png';
 	<main>
 		<h1>Case Study: <span class="text-gradient">Evolve Design System</span></h1>
 
-		<img src={kitchensink} width="100%" alt="Evolve Design System Kitchen Sink" />
+		<img src={kitchensink} width="100%" alt="Evolve Design System Kitchen Sink" class="margin-top-0" />
 		<p class="img-alt">Kitchen sink view of both light mode and dark mode components on desktop and mobile.</p>
 
-		<div class="align-center margin-top-48">
-			<a href="https://www.figma.com/proto/1BEIAWsKWgqbgWaeWyu5c1/EDS_-Components?page-id=6119%3A30505&type=design&node-id=8595-101204&viewport=830%2C536%2C0.15&t=JFo0nCQyfjzUZMWH-1&scaling=min-zoom&starting-point-node-id=8595%3A101204&mode=design" class="button" target="_blank">View component demo</a>
+		<div class="button-container">
+			<Button
+				href="https://www.figma.com/proto/1BEIAWsKWgqbgWaeWyu5c1/EDS_-Components?page-id=6119%3A30505&type=design&node-id=8595-101204&viewport=830%2C536%2C0.15&t=JFo0nCQyfjzUZMWH-1&scaling=min-zoom&starting-point-node-id=8595%3A101204&mode=design"
+				target="_blank"
+				text="View component demo"
+			/>
 		</div>
 
 		<h2>Be Efficient</h2>
-		<p class="text-large">Tasked with leading the design of a comprehensive design system during Evolve's rebrand, I aimed to establish reusable components, guidelines, and design principles. This system reinforces our brand identity, improves accessibility, and empowers collaborative and efficient workflows for our designers and developers.</p>
+		<p>Tasked with leading the design of a comprehensive design system during Evolve's rebrand, I aimed to establish reusable components, guidelines, and design principles. This system reinforces our brand identity, improves accessibility, and empowers collaborative and efficient workflows for our designers and developers.</p>
 		
 		<img src={vacationyou} width="100%" alt="Evolve Rebrand Examples" />
 		<p class="img-alt">Some examples from our instagram feed of the recent Evolve rebrand.</p>
@@ -67,12 +72,73 @@ import dialogsselectors from '../../images/dialogs-selectors.png';
 		<p>Initially, finding an app team for the design system adoption was challenging, hindering real-life testing. However, we partnered with a team redesigning the owner account web app. As consultants, we actively participated in their scrum ceremonies, addressing component variations and adjustments. The teams synchronized efforts, enabling a smooth development process. We also introduced guest and owner variations to align with distinct app color schemes, ensuring differentiation.</p>
 		<p>In the future, we aim to involve our Marketing team as contributors to our usage guidelines in Zeroheight. We plan to conduct user testing and A/B testing once the implementation progresses, aiming for success and buy-in from other teams. Expanding our design system and securing resources for future implementations will be driven by data and positive results.</p>
 
-		<div class="align-center margin-top-24">
-			<a href="https://www.figma.com/proto/1BEIAWsKWgqbgWaeWyu5c1/EDS_-Components?page-id=6119%3A30505&type=design&node-id=8595-101204&viewport=830%2C536%2C0.15&t=JFo0nCQyfjzUZMWH-1&scaling=min-zoom&starting-point-node-id=8595%3A101204&mode=design" class="button" target="_blank">View component demo</a>
+		<div class="button-container">
+			<Button
+				href="https://www.figma.com/proto/1BEIAWsKWgqbgWaeWyu5c1/EDS_-Components?page-id=6119%3A30505&type=design&node-id=8595-101204&viewport=830%2C536%2C0.15&t=JFo0nCQyfjzUZMWH-1&scaling=min-zoom&starting-point-node-id=8595%3A101204&mode=design"
+				target="_blank"
+				text="View component demo"
+			/>
 		</div>
 	</main>
 </Layout>
 
 <style lang="scss">
-	
+	main {
+		max-width: 90ch;
+
+		h1 {
+			font-size: 2.25rem;
+			font-weight: 500;
+			margin-block-start: 0;
+			margin-block-end: 2.5rem;
+		}
+
+		img {
+			margin-top: .5rem;
+		}
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 0 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+	}
+	h3 {
+		margin-block-start: 2rem;
+    	font-size: 1.25rem;
+	}
+	p {
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		main {
+
+			h1 {
+				font-size: 2.75rem;
+			}
+		}
+
+		.button-container {
+			align-items: center;
+		}
+
+		h2 {
+			font-size: 2rem;
+			margin-block-start: 1.75rem;
+			margin-block-end: 1.25rem;
+		}
+		h3 {
+			margin-block-start: 3rem;
+			font-size: 1.5rem;
+		}
+	}
 </style>

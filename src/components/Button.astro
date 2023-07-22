@@ -1,0 +1,50 @@
+---
+export interface Props {
+	href: string;
+	target: string;
+	text: string;
+}
+
+const { href, target, text } = Astro.props;
+---
+
+<a href={href} class="button" target={target}>{text}</a>
+
+<style lang="scss">
+
+	// Colors
+	$white: #fff;
+	$black: #353535;
+
+	$enabled: #6457a6;
+	$hover: #43387e;
+	$active: #8f81d7;
+
+	.button {
+		display: inline-block;
+		box-sizing: border-box;
+		padding: 1.125rem 1.5em;
+		vertical-align: middle;
+		border: none;
+		border-radius: 10rem;
+		background-color: $enabled;
+		font-family:'Barlow', sans-serif;
+		font-size: 1.125rem;
+		font-weight: 500;
+		text-decoration: none;
+		color: $white;
+		text-align: center;
+		transition: all 0.2s;
+
+		&:hover{
+			background-color: $hover;
+			color: $white;
+			text-decoration: none;
+		}
+		&:active{
+			background-color: $active;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+</style>

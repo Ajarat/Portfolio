@@ -5,8 +5,11 @@ export interface Props {
 
 const { title } = Astro.props;
 
-import bgcircleleft from '../images/bg-circle-left.svg';
-import bgtrianglesright from '../images/bg-triangles-right.svg';
+import Header from '../components/WorkCard.astro';
+
+import bgcircleleft from '/images/bg-circle-left.svg';
+import bgtrianglesright from '/images/bg-triangles-right.svg';
+import mjclogo from '../images/mjc-logo.svg';
 ---
 
 <!DOCTYPE html>
@@ -20,11 +23,32 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 		<title>{title}</title>
 	</head>
 	<body>
+		<header>
+			<a href="/" class="logo-container">
+				<img src={mjclogo} alt="Logo for MJC" />
+				<h1>Morgan Cadow</h1>
+			</a>
+			<div class="nav-links">
+				<a href="/work" class="my-work navunderline">My work</a>
+				<a href="/images/mcadow-resume-2023.pdf" target="_blank">Resume</a>
+			</div>
+		</header>
 		<slot />
 	</body>
 </html>
+
 <style is:global lang="scss">
 	@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,500;1,300&display=swap');
+
+	// Colors
+	$white: #fff;
+	$black: #353535;
+
+	$background: #F6F4F4;
+
+	$enabled: #6457a6;
+	$hover: #43387e;
+	$active: #8f81d7;
 
 	:root {
 		--accent: 100, 87, 166;
@@ -33,16 +57,28 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 	html {
 		font-family: 'Barlow', sans-serif;
 		font-weight: 300;
-		background-color: #F6F4F4;
+		background-color: $background;
 	}
-	code {
-		font-family: 'Barlow', sans-serif;
+	body {
+		margin: 0;
+		background-image: url(../images/bg-swirl.svg);
+		background-position: center 20px;
+		background-repeat: no-repeat;
 	}
-
 	main {
 		margin: auto;
 		padding: 2.25rem 1.25rem;
 	}
+
+	.title-area {
+		margin-bottom: 3rem;
+
+		img {
+			display: none;
+		}
+	}
+
+	// Text Styles
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -50,20 +86,14 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 		background-size: 400%;
 		background-position: 0%;
 	}
-	h1 {
+	h2 {
 		font-size: 2.25rem;
 		font-weight: 500;
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 	}
-	h2 {
-		font-size: 1.75rem;
-		font-weight: 500;
-		margin: 2rem 0 1rem 0;
-	}
-	h3 {
-		font-size: 1.25rem;
-		font-weight: 500;
-		margin: 2rem 0 1rem 0;
+	.subtitle {
+		margin: 0 0 3rem;
+    	font-size: 1.25rem;
 	}
 	a {
 		font-weight: 500;
@@ -73,16 +103,16 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 
 		&:hover {
 			text-decoration: underline;
-			color: #43387e;
+			color: $hover;
 		}
 		&:active{
-			color: #8f81d7;
+			color: $active;
 		}
 	}
-	img {
-		margin-top: 1rem;
-	}
 	p {
+		margin-block-start: .5em;
+    	margin-block-end: .5em;
+
 		&.img-alt {
 			font-weight: 300;
 			font-style: italic;
@@ -98,55 +128,11 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 		font-weight: 300;
 		font-style: italic;
 	}
-	hr {
-		border: 0;
-		height: 1px;
-		width: 20%;
-		position: relative;
-		margin: 30px auto;
-		background: #EE9ECF;
 
-		&:before {
-			content: "";
-			width: 6px;
-			height: 6px;
-			background: #EE9ECF;
-			display: block;
-			border: 2px solid #EE9ECF;
-			border-radius: 0;
-			position: absolute;
-			top: -4px;
-			left: 50%;
-			margin: 0 0 0 -3px;
-		}
+	// Utilities
+	.margin-top-0 {
+		margin-top: 0;
 	}
-
-	@media only screen and (min-width: 768px) {
-		body {
-			margin: 0;
-			background-image: url(../images/bg-circle-left.svg), url(../images/bg-swirl.svg), url(../images/bg-triangles-right.svg);
-			background-position: left 270px, center 120px, right top;
-			background-repeat: no-repeat, no-repeat, no-repeat;
-		}
-		main {
-			margin: auto;
-			padding: 5rem 0;
-			max-width: 70ch;
-		}
-		h1 {
-			font-size: 3rem;
-			margin: 0 0 2.5rem 0;
-		}
-		h2 {
-			font-size: 2.5rem;
-			margin: 3rem 0 1rem 0;
-		}
-		h3 {
-			font-size: 1.75rem;
-			margin: 2rem 0 1rem 0;
-		}
-	}
-
 	.margin-top-16 {
 		margin-top: 1rem;
 	}
@@ -156,33 +142,236 @@ import bgtrianglesright from '../images/bg-triangles-right.svg';
 	.margin-top-48 {
 		margin-top: 3rem;
 	}
-
 	.align-center {
 		text-align: center;
 	}
 
-	a.button {
-		display: inline-block;
-		box-sizing: border-box;
-		margin: 0;
-		padding: 1.125rem 1.5em;
-		vertical-align: middle;
-		border: none;
-		border-radius: 10rem;
-		background-color: #6457a6;
-		font-family:'Barlow', sans-serif;
-		font-size: 1.125;
-		font-weight: 500;
-		text-decoration: none;
-		color: #fff;
-		text-align: center;
-		transition: all 0.2s;
+	// Header
+	header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 1rem 0 1rem 1rem;
 
-		&:hover{
-			background-color: #43387e;
+		& > * {
+			display: flex;
 		}
-		&:active{
-			background-color: #8f81d7;
+
+		.logo-container {
+
+			img {
+				width: 40px;
+			}
+			h1 {
+				display: none;
+			}
+		}
+		.nav-links {
+			align-items: center;
+			 
+			a {
+				margin-right: 1.5rem;
+				font-size: 1.125rem;
+				color: $black;
+
+				&:hover {
+					color: $hover;
+					text-decoration: underline;
+				}
+				&:active {
+					color: $active;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	// Divider
+	.hr {
+		width: 100%;
+		height: 2px;
+		display: block;
+		position: relative;
+		margin-block-start: 3rem;
+    	margin-block-end: 3rem;
+
+		&:after,
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: 50%;
+			left: 0;
+		}
+
+		&:before {
+			background: linear-gradient( 90deg, $background 0%, $background 50%, transparent 50%, transparent 100% );
+			background-size: 15px;
+			background-position: center;
+			z-index: 1;
+		}
+
+		&:after {
+			transition: opacity 0.3s ease, animation 0.3s ease;
+
+			background: linear-gradient(
+				to right, 
+				#FFD085 0%, 
+				#EE9ECF 20%, 
+				#94F0EB 40%, 
+				#6457A6 60%,
+				#FFD085 80%);
+
+			background-size: 200%;
+			background-position: 0%;
+			animation: bar 15s linear infinite;
+		}
+
+		@keyframes bar {
+			0% { background-position: 0%; }
+			100% { background-position: 200%; }
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		body {
+			background-image: url(../images/bg-circle-left.svg), url(../images/bg-swirl.svg), url(../images/bg-triangles-right.svg);
+			background-position: left 270px, center 120px, right top;
+			background-repeat: no-repeat, no-repeat, no-repeat;
+		}
+		main {
+			margin: auto;
+			padding: 2rem 1.5rem;
+			max-width: 1260px;
+		}
+
+		.title-area {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 5rem;
+
+			img {
+				display: block;
+				width: 250px;
+    			margin-left: 3rem;
+			}
+		}
+
+		h2 {
+			margin: 0 0 1.5rem;
+			font-size: 2rem;
+		}
+		.subtitle {
+			margin: 0 0;
+			font-size: 1.25rem;
+		}
+		ul {
+			margin-block-start: .5rem;
+			margin-block-end: .5rem;
+			padding-inline-start: 1.5rem;
+		}
+
+		header {
+			padding: 1.5rem 1rem 1.5rem 1.5rem;
+
+			.logo-container {
+				align-items: center;
+
+				img {
+					width: 50px;
+				}
+				h1 {
+					display: inline-block;
+					margin: 0 0 0 1.25rem;
+					font-size: 1.25rem;
+					color: $black;
+				}
+
+				&:hover h1 {
+					color: $hover;
+					text-decoration: underline;
+				}
+				&:active h1 {
+					color: $active;
+					text-decoration: underline;
+				}
+			}
+			.nav-links {
+				
+				a {
+					margin-right: 1.5rem;
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		main {
+			padding: 2rem 1.5rem 3rem;
+		}
+
+		h2 {
+			font-size: 2.5rem;
+		}
+		.subtitle {
+			font-size: 1.5rem;
+		}
+
+		.title-area {
+
+			img {
+				width: 350px;
+				margin-left: 4rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1260px) {
+
+		main {
+			padding: 3rem 1.5rem 4rem;
+		}
+
+		header {
+			max-width: 1260px;
+			margin: auto;
+			padding: 1.5rem;
+
+			.logo-container {
+				
+				h1 {
+					display: inline-block;
+					margin: 0 0 0 1.5rem;
+				}
+			}
+			.nav-links {
+				
+				a {
+					margin-right: 2rem;
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		h2 {
+			font-size: 3rem;
+		}
+
+		.title-area {
+			margin-bottom: 6rem;
+
+			img {
+				width: 400px;
+    			margin-left: 5rem;
+			}
 		}
 	}
 </style>

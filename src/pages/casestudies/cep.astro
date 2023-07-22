@@ -17,20 +17,18 @@ import cephistory from '../../images/cep-history.jpg';
 	<main>
 		<h1>Research Report: <span class="text-gradient">CEP</span></h1>
 
-		<div class="text-large">
-			<p>CX at Evolve faces many inefficiencies that limit their ability to provide world-class hospitality.</p>
-			<p>Right now, our front-line teams must toggle between many different applications, dig through fragmented customer interaction histories and customer information, and struggle with clunky and limited workflow systems.</p>
-			<p>To form a clearer view of the best path forward, we conducted research focused on how our teams interact with our customers and the tools they use to do so.</p>
-		</div>
+		<p>CX at Evolve faces many inefficiencies that limit their ability to provide world-class hospitality.</p>
+		<p>Right now, our front-line teams must toggle between many different applications, dig through fragmented customer interaction histories and customer information, and struggle with clunky and limited workflow systems.</p>
+		<p>To form a clearer view of the best path forward, we conducted research focused on how our teams interact with our customers and the tools they use to do so.</p>
+		<p>CEP, or Customer Engagement Platform, is a stand-alone app that provides its users with the ability to see and service all customer interactions conducted by themselves, co-workers, and between customers. By developing a single-view application centered around a customer interaction timeline, we believe we can create service efficiencies, improve customer NPS and retention, provide data to inform future enhancements, and build a better overall Evolver experience.</p>
 
 		<img src={cepmindmap} width="100%" alt="CEP Mindmap" />
 		<p class="img-alt">Mindmap of the CEP project.</p>
-		<br />
 
-		<p>CEP, or Customer Engagement Platform, is a stand-alone app that provides its users with the ability to see and service all customer interactions conducted by themselves, co-workers, and between customers. By developing a single-view application centered around a customer interaction timeline, we believe we can create service efficiencies, improve customer NPS and retention, provide data to inform future enhancements, and build a better overall Evolver experience.</p>
+		<b class="hr"></b>
 
 		<h2>What We Did</h2>
-		<p class="text-large">Our process involved <strong>shadow sessions, interviews, and a survey</strong> with many of our front-line Evolvers. We were able to make ample observations, identify trends, and produce several insights that align with the original CX needs list. During the interview stage, our process was cut short when were learned of Xcelerate's limitations. (Xcelerate is the platform we planned to build this in.)</p>
+		<p>Our process involved <strong>shadow sessions, interviews, and a survey</strong> with many of our front-line Evolvers. We were able to make ample observations, identify trends, and produce several insights that align with the original CX needs list. During the interview stage, our process was cut short when were learned of Xcelerate's limitations. (Xcelerate is the platform we planned to build this in.)</p>
 
 		<h3>Shadow Sessions</h3>
 		<p>We shadowed Evolvers from Trust & Safety, Guest Experience, Owner Support, and Booking Management over twelve 45 minute sessions focusing specifically on Airbnb Support cases, live chats, and calls.</p>
@@ -50,6 +48,8 @@ import cephistory from '../../images/cep-history.jpg';
 
 		<img src={cepsurvey} width="100%" alt="Some responses from our Pieces of Information Survey" />
 		<p class="img-alt">Some responses from our Pieces of Information Survey.</p>
+
+		<b class="hr"></b>
 
 		<h2>Top Insights</h2>
 		<p class="large-text">We synthesized all of the notes from our shadow sessions, interviews, and prioritization activities into 7 “issue buckets.” The chart below is the sum of mentions of each of these issues and the pain involved in the current systems.</p>
@@ -141,6 +141,8 @@ import cephistory from '../../images/cep-history.jpg';
 			<li>So you can have this great chat- you didn't actually link it right there, somebody else later comes back and goes to look for it. They will not see it.”</li>
 		</ul>
 
+		<b class="hr"></b>
+
 		<h2>Summary</h2>
 		<p class="text-large">Our research has shown the current system presents a handful of recurring pain points that limit our Evolver’s ability to serve.</p>
 
@@ -162,6 +164,8 @@ import cephistory from '../../images/cep-history.jpg';
 		</ul>
 		<p><strong>I believe all of these issues are connected and the development of a solution for one will begin to alleviate the pain of, and inform how best to solution the rest.</strong></p>
 
+		<b class="hr"></b>
+
 		<h2>Recommendations</h2>
 
 		<p class="text-large-italic">Limit the Swivel.</p>
@@ -177,12 +181,62 @@ import cephistory from '../../images/cep-history.jpg';
 </Layout>
 
 <style lang="scss">
+	main {
+		max-width: 90ch;
+
+		h1 {
+			font-size: 2.25rem;
+			font-weight: 500;
+			margin-block-start: 0;
+			margin-block-end: 2.5rem;
+		}
+
+		img {
+			margin-top: .5rem;
+		}
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 0 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+		margin-block-start: 2rem;
+		margin-block-end: 1rem;
+	}
+	h3 {
+		margin-block-start: 2rem;
+    	font-size: 1.25rem;
+	}
 	p {
-		&.img-alt {
-			font-weight: 300;
-			font-style: italic;
-			font-size: 0.875rem;
-			text-align: center;
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		main {
+
+			h1 {
+				font-size: 2.75rem;
+			}
+		}
+
+		.button-container {
+			align-items: center;
+		}
+
+		h2 {
+			font-size: 2rem;
+			margin-block-start: 3rem;
+			margin-block-end: 1.25rem;
+		}
+		h3 {
+			margin-block-start: 3rem;
+			font-size: 1.5rem;
 		}
 	}
 </style>

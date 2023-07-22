@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkCard from '../components/WorkCard.astro';
+
+// Images
+import workcat from '/images/work-cat.svg';
+---
+
+<Layout title="My work">
+	<main>
+		<div class="title-area">
+			<div>
+				<h2>Here is some of <span class="text-gradient">my work</span>!</h1>
+				<p class="subtitle">If there is a particular project you're interested in and want to know more, <a href="mailto:morgan@ajarat.io">email me</a>!</p>
+			</div>
+			<img src={workcat} width="100%" alt="Cool cat drawing" />
+		</div>
+
+		<div class="work-cards">
+			<WorkCard
+				img="/images/eds-kitchen-sink-mockup.png"
+				alt="Evolve Design System Kitchen Sink"
+				title="Evolve Design System"
+				body="A comprehensive design system, built in Figma, for the Evolve rebrand. Defines a range of reusable components that maintain visual coherence, improve accessibility, and streamline the design process. Usage guidelines written in Zeroheight."
+				href="/casestudies/eds"
+				target="_self"
+				text="View case study"
+			/>
+
+			<!-- <b class="hr"></b>
+
+			<WorkCard
+				img="/images/ta-mockup.png"
+				alt="TripAssist mockups"
+				title="TripAssist"
+				body="A Salesforce application for Evolve's customer service employees, enabling them to easily update and cancel bookings. Provides quick access to booking details for accurate and timely updates. Automation and intelligent data management enhance efficiency, improving customer satisfaction and streamlining operations."
+				href="/casestudies/tripassist"
+				target="_self"
+				text="View case study"
+			/> -->
+
+			<b class="hr"></b>
+
+			<WorkCard
+				img="/images/cep-red-routes.jpg"
+				alt="Red Routes charts for CEP"
+				title="CEP"
+				body="A research report that evaluates a stand-alone customer engagement platform that offers complete visibility and control over all customer interactions. Analyzing its features and performance, it showcases the app's potential to enhance customer service, foster team collaboration, and drive customer satisfaction."
+				href="/casestudies/cep"
+				target="_self"
+				text="View research report"
+			/>
+		</div>
+	</main>
+</Layout>
+
+<style lang="scss">
+
+	@media only screen and (min-width: 768px) {
+
+		.title-area {
+
+			img {
+				margin-right: 2rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+
+		.title-area {
+
+			img {
+				margin-right: 3rem;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1260px) {
+
+		.title-area {
+
+			img {
+				margin-right: 4rem;
+			}
+		}
+	}
+</style>

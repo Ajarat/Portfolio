@@ -1,106 +1,273 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
 
 // Images
-import mjclogo from '../images/mjc-logo.svg';
+import mjcphoto from '/images/mjc-photo.png';
+import pets from '/images/pets.jpg';
+import aboutcat from '/images/about-cat.svg';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<div class="logo">
-			<img src={mjclogo} alt="Logo for MJC" />
+		<div class="title-area">
+			<div>
+				<h2>Hiya! I'm <strong>Morgan Cadow</strong>. I'm an <span class="text-gradient">Experience Designer</span> based in Denver.</h1>
+				<p class="subtitle">I love building design systems and data-rich interfaces.</p>
+				<Button
+					href="/work"
+					target="_self"
+					text="See some of my work"
+				/>
+			</div>
+			<img src={aboutcat} width="100%" alt="Cool cat drawing" />
 		</div>
 
-		<h1>Hiya! I'm <strong>Morgan Cadow</strong>. I'm an <span class="text-gradient">Experience Designer</span> based in Denver.</h1>
+		<div class="about-me">
+			<img src={mjcphoto} width="100%" alt="Photo of Morgan Cadow" />
 
-		<p class="subtitle">I love building design systems and data-rich interfaces.</p>
+			<div>
+				<h3>A lil about me</h3>
+				<p class="text-large">I've worked professionally as a <strong>UX/Product Designer</strong>, <strong>Web Designer</strong>, and <strong>Front-End Developer</strong> for <strong>18 years</strong>.</p>
+				<p>I've managed small and medium design teams, but in recent years I've enjoyed getting back to focusing on the work itself. Looking for opportunities where I can provide technical leadership and mentorship while having the bandwidth to contribute creatively!</p>
 
-		<div class="align-center margin-top-24">
-			<a href="https://drive.google.com/file/d/1eosDSQRjtbyvPLkPv8jIfjph8f1LIRer/view?usp=sharing" class="button" target="_blank">Download my resume</a>
+				<h4>My specialties</h4>
+				<ul>
+					<li>Design Systems</li>
+					<li>Transforming complex data into intuitive solutions</li>
+					<li>Building efficiencies in the design process</li>
+					<li>Bridging the gap between design and dev</li>
+					<li>Big-picture thinking</li>
+					<li>Building strong design teams and team culture</li>
+				</ul>
+
+				<h4>What I value</h4>
+				<ul>
+					<li>Knowing my work has impact</li>
+					<li>Interacting with my users first-hand</li>
+					<li>Working on a strong triad so I'm always learning</li>
+					<li>The idea that our internal employees are just as important as our customers</li>
+					<li>Building future-safe</li>
+				</ul>
+
+				<h4>Industries I've worked in</h4>
+				<ul>
+					<li>E-Commerce</li>
+					<li>Fintech</li>
+					<li>Hospitality</li>
+					<li>Publishing</li>
+					<li>Agency</li>
+				</ul>
+			</div>
 		</div>
 
-		<p class="instructions">
-			I’m currently redesigning my site. If you would like to read some of the <strong>Case Studies</strong> for my recent work, have a work inquiry, or just want to chat drop me a line at <a href="mailto:morgan@ajarat.io">morgan@ajarat.io</a>.
-			<br /><br />
-			Thanks for stopping by!
-		</p>
+		<b class="hr"></b>
+
+		<div class="fun-stuff">
+			<h3>Now for important stuff</h3>
+			<p class="text-large">Originally from Miami, FL, I currently live in Denver with my husband, my American Bully, Saoirse, and my three-legged tabby, Olenna  (The Queen of Thorns).</p>
+
+			<div>
+				<div>
+					<div>
+						<h4>Things I love</h4>
+						<ul>
+							<li>Kitty cats</li>
+							<li>Rain</li>
+							<li>Mountains</li>
+							<li>Art supplies</li>
+							<li>Cars</li>
+							<li>Rocks</li>
+							<li>Musicals</li>
+							<li>Eurovision</li>
+							<li>Period pieces</li>
+							<li>Anime/Manga/Mangwha</li>
+							<li>Tuna Salad</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4>What I do for fun</h4>
+						<ul>
+							<li>Snuggle with my fur babies</li>
+							<li>Play video games- got back into WoW this year</li>
+							<li>Paint- I do abstract impressionist stuff and collage</li>
+							<li>Draw- I love to draw animals and silly creatures!</li>
+							<li>Drive my Miata</li>
+							<li>Sing 90's Disney songs</li>
+							<li>Cook (with a glass of wine)</li>
+							<li>Listen to music (also with a glass of wine)</li>
+							<li>Hike, and generally enjoy nature</li>
+							<li>Meditate</li>
+						</ul>
+					</div>
+				</div>
+
+				<div>
+					<div>
+						<h4>Shows I’ve watched like 100 times</h4>
+						<ul>
+							<li>It’s Always Sunny in Philadelphia</li>
+							<li>Derry Girls</li>
+							<li>Community</li>
+							<li>Schitt’s Creek</li>
+							<li>The IT Crowd</li>
+							<li>Psych</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4>Movies I know by heart</h4>
+						<ul>
+							<li>The Lion King</li>
+							<li>The Sound of Music</li>
+							<li>Moulin Rouge</li>
+							<li>Eurovision Song Contest: The Story of Fire Saga</li>
+						</ul>
+					</div>
+				</div>
+				<img src={pets} width="100%" alt="Saoirse and Olenna" class="pets" />
+				<p class="img-alt">Fur baby tax.</p>
+			</div>
+		</div>
 	</main>
 </Layout>
 
-<!--
-	<ul role="list" class="link-card-grid">
-		<Card
-			href="https://astro.build/integrations/"
-			title="Integrations"
-			body="Supercharge your project with new frameworks and libraries."
-		/>
-		<Card
-			href="https://astro.build/themes/"
-			title="Themes"
-			body="Explore a galaxy of community-built starter themes."
-		/>
-		<Card
-			href="https://astro.build/chat/"
-			title="Community"
-			body="Come say hi to our amazing Discord community. ❤️"
-		/>
-	</ul>
--->
-
 <style lang="scss">
-	.logo {
-		text-align: center;
+	.title-area {
+		padding-bottom: 3rem;
 
-		img {
-			width: 150px;
+		& > div {
+			display: flex;
+			flex-direction: column;
 		}
 	}
-	h1 {
-		margin: 1.5rem 0 0.75rem 0;
-		font-size: 1.75rem;
-		text-align: center;
-	}
 	.subtitle {
-		font-size: 1.25rem;
-		text-align: center;
+		margin-bottom: 1.5rem;
 	}
-	.instructions {
-		margin: 1.5rem 0;
-		padding: 1.5rem;
-		border-radius: 0.4rem;
-		border: 4px solid rgba(255, 208, 133, 1);
-		background-color: rgba(255, 208, 133, 0.3);
+	.about-me {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			max-width: 300px;
+		}
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin-block-start: 1rem;
+    	margin-block-end: 1rem;
+	}
+	h4 {
 		font-size: 1.25rem;
-		line-height: 1.25;
+		font-weight: 500;
+		margin-block-start: 1rem;
+    	margin-block-end: .5rem;
+	}
+
+	.pets {
+		margin-top: 1.5rem;
+		border-radius: .5rem;
 	}
 
 	@media only screen and (min-width: 768px) {
-		.logo {
+		.title-area {
+			padding-bottom: 0;
 
-			img {
-				width: 200px;
+			& > div {
+				display: block;
 			}
 		}
-		h1 {
-			margin: 2rem 0 1rem 0;
-			font-size: 2.5rem;
+
+		h3 {
+			margin-block-start: 0;
+			margin-block-end: 1.25rem;
+			font-size: 1.75rem;
 		}
-		.subtitle {
-			font-size: 1.5rem;
-		}
-		.instructions {
-			margin: 2rem 0;
-			padding: 2rem;
+		h4 {
 			font-size: 1.25rem;
-			line-height: 1.6;
+			margin-block-start: 1.25rem;
+			margin-block-end: .75rem;
+		}
+		
+		.about-me {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+
+			img {
+				width: 250px;
+				height: 250px;
+				margin-right: 2rem;
+			}
+		}
+
+		.fun-stuff {
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+
+				& > div {
+					display: flex;
+					flex-direction: row;
+
+					& > div {
+						width: 50%;
+					}
+				}
+			}
 		}
 	}
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	@media only screen and (min-width: 1024px) {
+		
+		.about-me {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+
+			img {
+				width: 300px;
+				height: 300px;
+			}
+			h3 {
+				margin-block-start: 0;
+			}
+		}
+
+		.fun-stuff {
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+
+				& > div {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1260px) {
+		
+		.subtitle {
+			margin-bottom: 2rem;
+		}
+
+		h3 {
+			margin-block-end: 1.25rem;
+			font-size: 2rem;
+		}
+		h4 {
+			margin-block-start: 1.25rem;
+			margin-block-end: .75rem;
+			font-size: 1.5rem;
+		}
 	}
 </style>
