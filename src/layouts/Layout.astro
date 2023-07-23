@@ -6,6 +6,8 @@ export interface Props {
 const { title } = Astro.props;
 
 import mjclogo from '/images/mjc-logo.svg';
+import email from '/images/email-icon.svg';
+import linkedin from '/images/linkedin-icon.svg';
 ---
 
 <!DOCTYPE html>
@@ -30,6 +32,14 @@ import mjclogo from '/images/mjc-logo.svg';
 			</div>
 		</header>
 		<slot />
+		<footer>
+			<a href="mailto:morgan@ajarat.io">
+				<img src={email} width="100%" alt="Email me!" />
+			</a>
+			<a href="https://www.linkedin.com/in/mcadow/" target="_blank">
+				<img src={linkedin} width="100%" alt="See me on LinkedIn!" />
+			</a>
+		</footer>
 	</body>
 </html>
 
@@ -108,6 +118,7 @@ import mjclogo from '/images/mjc-logo.svg';
 	p {
 		margin-block-start: .5em;
     	margin-block-end: .5em;
+		line-height: 1.6;
 
 		&.img-alt {
 			font-weight: 300;
@@ -178,6 +189,23 @@ import mjclogo from '/images/mjc-logo.svg';
 					color: $active;
 					text-decoration: underline;
 				}
+			}
+		}
+	}
+
+	// Footer
+	footer {
+		display: flex;
+		justify-content: center;
+		padding: 3rem 0;
+		background-color: $white;
+
+		a {
+			
+			img {
+				width: 50px;
+				height: 50px;
+				margin: 0 1rem;
 			}
 		}
 	}
@@ -303,6 +331,17 @@ import mjclogo from '/images/mjc-logo.svg';
 				}
 			}
 		}
+
+		footer {
+			padding: 4rem 0;
+
+			a {
+				
+				img {
+					margin: 0 2rem;
+				}
+			}
+		}
 	}
 
 	@media only screen and (min-width: 1024px) {
@@ -325,12 +364,16 @@ import mjclogo from '/images/mjc-logo.svg';
 				margin-left: 4rem;
 			}
 		}
+
+		footer {
+			padding: 6rem 0;
+		}
 	}
 
 	@media only screen and (min-width: 1260px) {
 
 		main {
-			padding: 3rem 1.5rem 4rem;
+			padding: 3rem 1.5rem 6rem;
 		}
 
 		header {

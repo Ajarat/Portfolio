@@ -1,27 +1,133 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
 
 // Images
-import kitchensink from '/images/eds-kitchen-sink-mockup.png';
+import tamockup from '/images/ta-mockup.png';
+import airlinemask from '/images/airline-mask.jpeg';
 ---
 
 <Layout title="Case Study: TripAssist">
 	<main>
 		<h1>Case Study: <span class="text-gradient">TripAssist</span></h1>
 
-		<img src={kitchensink} width="100%" alt="Evolve Design System Kitchen Sink" />
-		<p class="img-alt">Kitchen sink view of both light mode and dark mode components on desktop and mobile.</p>
+		<img src={tamockup} width="100%" alt="TripAssist Cancellation Details mockup on a computer screen" class="margin-top-0" />
+		<p class="img-alt">TripAssist Cancellation Details mockup.</p>
 
-		<div class="align-center margin-top-48">
-			<a href="https://www.figma.com/proto/1BEIAWsKWgqbgWaeWyu5c1/EDS_-Components?page-id=6119%3A30505&type=design&node-id=8595-101204&viewport=830%2C536%2C0.15&t=JFo0nCQyfjzUZMWH-1&scaling=min-zoom&starting-point-node-id=8595%3A101204&mode=design" class="button" target="_blank">View component demo</a>
+		<div class="button-container">
+			<Button
+				href="https://www.figma.com/proto/Eeq7rLfpIwMpoDDO5zioeq/(OLD)-TripAssist?page-id=12%3A51558&type=design&node-id=28-52054&viewport=1201%2C590%2C0.12&t=6J399nC7nA7XUMp7-1&scaling=min-zoom&starting-point-node-id=28%3A52054"
+				target="_blank"
+				text="View Partial Refund prototype"
+			/>
 		</div>
 
-		<h2>Be Efficient</h2>
-		<p class="text-large">Tasked with leading the design of a comprehensive design system during Evolve's rebrand, I aimed to establish reusable components, guidelines, and design principles. This system reinforces our brand identity, improves accessibility, and empowers collaborative and efficient workflows for our designers and developers.</p>
-		
+		<h2>Before you help others, you must first help yourself</h2>
+		<p>“Customer First” is something that is drilled into us as designers, but after spending weeks shadowing the CX teams at Evolve I realized I was witnessing why the airline rule is so important- before you help others, you must first help yourself. Our booking modification and cancellation tools were so basic, buggy, and manual that it was not only making our teams miserable, it was degrading our customer experience as well.</p>
+
+		<img src={airlinemask} width="100%" alt="Instructions for putting on an airline oxygen mask" />
+		<p class="img-alt">Instructions for putting on an airline oxygen maskp.</p>
+
+		<h3>The Flywheel</h3>
+		<p>At Evolve, the company has spent years being “owner-focused,” meaning we always saw our customers as being the owners of the vacation rental properties we promoted. More recently, leadership did some soul-searching and decided we need to be “hospitality-focused,” meaning we see our guests (those that stay at our vacation rental properties) and Evolvers (employees of Evolve) as equally important customers on the flywheel of our business.</p>
+		<p>In 2018, Evolve released Stripe integration so our credit card transactions would be more smooth and secure. During the CX All Hands meeting announcing the release, all CX employees were giving a physical calculator for all of the complicated manual calculations they were going to have to learn to do when modifying or cancelling a booking. Needless to say, no one was happy about this.</p>
+		<p>Even before I started my discovery for this project, I knew it was my goal to make really make our Evolvers feel heard during every step of the process.</p>
+
+		<h3>eNPS = NPS</h3>
+		<p>Our goal for the project, which we named TripAssist, was to not only automate all of these complicated calculations, but to create flows that were intuitive enough that a brand new Evolve could go in with very little training and help our customers.</p>
+
+		<p><strong>The metrics we chose to focus on included:</strong></p>
+		<ol>
+			<li>Improving Evolver eNPS</li>
+			<li>Decreasing our CX turnover rate</li>
+			<li>Decreasing training time for new Evolvers</li>
+			<li>Decreasing hold times on calls</li>
+			<li>Decreasing open time on cases</li>
+			<li>Improve overall Evolve NPS</li>
+			<li>Increasing transaction accuracy</li>
+		</ol>
+
+		<h3>My Role</h3>
+		<p>The entire project was lead by myself as the sole UX/Product Designer and a Project Manager, who was indispensable and helped me with research and keeping everything organized and on track. Our discovery phase started in June 2021.</p>
+
+		<h3>Building Trust from the Ground Up</h3>
+		<p>When I came into this project, I knew next to nothing about how any of these transactions worked or what tools the team already had or didn't have at their disposal. My PM was already very familiar with an existing tool that had been designed a year earlier in an attempt to automate some simple calculations, but it didn't work at least as often as it did. I very specifically ask to not see the existing tool, what everyone called the Mod Tool, as I wanted to take the time to learn about the team's problems and come up with fresh solutions.</p>
+		<p>We determined our first iteration of TripAssist would be based on the everyday challenges faced by our pre-stay booking modification team (RM) and our pre-stay booking cancellation team (CARE). These teams had the longest hold times on calls, most inaccurate calculations, lowest retention rate, and almost completely lacked the ability to make hospitality exceptions. Hospitality Exceptions is what we call giving our guests a discount, refund, etc when something has gone wrong and it's the best way to help them out of a tough spot.</p>
+		<p>Improving all of these metrics would require that we build a tool our front-line Evolvers trust.</p>
+
+		<h3>A Day in the Life</h3>
+		<p>Our discovery process began by shadowing 7 members of the RM team (modifications-focused) and 14 members of the CARE team (cancellations-focused). The members we met with had the full spectrum of CX experience from new hires to management. We met with them on over Zoom so we could listen to both ends of the calls they took and when they weren't on calls they talked us through case work. Both my PM, Kareem, and I took notes on everything we saw. We made sure to tag our notes for future organization.</p>
+		<p>What we noticed were extremely long hold times to execute simple adjustments, extremely complicated manual calculations, and far too many clicks to even arrive in the places where necessary entry fields or information existed. Outside of just transaction-related issues, we took not of other inefficiencies like cumbersome email sending, too much specialization in service resulting in several transfers on calls, and the use of over a dozen third-party services in an attempt to digitize the entire experience.</p>
+		<p>Every user had dozens of tabs open in both their browsers and Salesforce because even the simplest cases took longer to complete than it took for the next call to come in and cases would just pile up on one another. It was nothing but impressive they were able to keep all this information in their heads, interact with our customers, and do complicated financial math all day every day.</p>
+
+		<h3>Data Distillery</h3>
+		<p>After the completion of our shadow sessions, Kareem and I sifted through our mountains of notes and entered them into a massive spreadsheet that would become out data hub for TripAssist. This first page of our spreadsheet contained each note taken, who recorded it, who was being shadowed, the team they were on, and their title. Once all of this was entered we added some columns to our spreadsheet where we could indicate if the note was Transaction-Related (as in something we could definitely solve with TripAssist), a general opportunity (something we could improve in the future), and if we thought we might derive an interview question from it. We also recorded the general emotion we observed during each other these notes.</p>
+		<p>The products of this data distillation were two interview scripts for our CARE and RM Evolvers and a Red Routes chart with a list of “features” we thought could be useful in TripAssist.</p>
+
+		<h3>What Does Hospitality Mean to You?</h3>
+		<p>We conducted interviews with 9 members of the RM team and 5 members of the CARE team in UserZooom Go. This tool allowed us to take our notes along side the video and organize our tags more efficiently.</p>
+		<p>We began every interview by asking our Evolvers, “What does hospitality mean to you?.” It was important for us to establish where the general mindset was concerning interacting with our customers and where we should focus to maximize improving our CX.</p>
+		<p>We asked a variety of questions from what part of their current toolset they love and hate, which amusingly ended up being the currently Mod Tool, more often than not, for both, because they loved automated calculations…when they <i>worked</i>.</p> 
 	</main>
 </Layout>
 
 <style lang="scss">
-	
+	main {
+		max-width: 90ch;
+
+		h1 {
+			font-size: 2.25rem;
+			font-weight: 500;
+			margin-block-start: 0;
+			margin-block-end: 2.5rem;
+		}
+
+		img {
+			margin-top: .5rem;
+		}
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 0 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+	}
+	h3 {
+		margin-block-start: 2rem;
+    	font-size: 1.25rem;
+	}
+	p {
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		main {
+
+			h1 {
+				font-size: 2.75rem;
+			}
+		}
+
+		.button-container {
+			align-items: center;
+		}
+
+		h2 {
+			font-size: 2rem;
+			margin-block-start: 1.75rem;
+			margin-block-end: 1.25rem;
+		}
+		h3 {
+			margin-block-start: 3rem;
+			font-size: 1.5rem;
+		}
+	}
 </style>
