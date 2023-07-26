@@ -17,172 +17,242 @@ import cephistory from '/images/cep-history.jpg';
 	<main>
 		<h1>Research Report: <span class="text-gradient">CEP</span></h1>
 
-		<p>CX at Evolve faces many inefficiencies that limit their ability to provide world-class hospitality.</p>
-		<p>Right now, our front-line teams must toggle between many different applications, dig through fragmented customer interaction histories and customer information, and struggle with clunky and limited workflow systems.</p>
-		<p>To form a clearer view of the best path forward, we conducted research focused on how our teams interact with our customers and the tools they use to do so.</p>
-		<p>CEP, or Customer Engagement Platform, is a stand-alone app that provides its users with the ability to see and service all customer interactions conducted by themselves, co-workers, and between customers. By developing a single-view application centered around a customer interaction timeline, we believe we can create service efficiencies, improve customer NPS and retention, provide data to inform future enhancements, and build a better overall Evolver experience.</p>
-
-		<img src={cepmindmap} width="100%" alt="CEP Mindmap" />
-		<p class="img-alt">Mindmap of the CEP project.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="mindmap-scroll">
+					<img src={cepmindmap} width="100%" alt="CEP Mindmap" class="margin-top-0" />
+				</div>
+				<p class="img-alt">Mindmap of the CEP project.</p>
+			</div>
+			<div class="right-column">
+				<p class="margin-top-0">CX at Evolve faces many inefficiencies that limit their ability to provide world-class hospitality.</p>
+				<p>Right now, our front-line teams must toggle between many different applications, dig through fragmented customer interaction histories and customer information, and struggle with clunky and limited workflow systems.</p>
+				<p>To form a clearer view of the best path forward, we conducted research focused on how our teams interact with our customers and the tools they use to do so.</p>
+				<p>CEP, or Customer Engagement Platform, is a stand-alone app that provides its users with the ability to see and service all customer interactions conducted by themselves, co-workers, and between customers. By developing a single-view application centered around a customer interaction timeline, we believe we can create service efficiencies, improve customer NPS and retention, provide data to inform future enhancements, and build a better overall Evolver experience.</p>
+			</div>
+		</section>
 
 		<b class="hr"></b>
 
-		<h2>What We Did</h2>
-		<p>Our process involved <strong>shadow sessions, interviews, and a survey</strong> with many of our front-line Evolvers. We were able to make ample observations, identify trends, and produce several insights that align with the original CX needs list. During the interview stage, our process was cut short when were learned of Xcelerate's limitations. (Xcelerate is the platform we planned to build this in.)</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true">
+					<img src={shadownotes} width="100%" alt="Shadow session notes consolidation" />
+				</div>
+				<p class="img-alt">Consolidation of the notes from all the shadow sessions.</p>
+			</div>
+			<div class="right-column">
+				<h2 class="margin-top-0">What We Did</h2>
+				<p>Our process involved <strong>shadow sessions, interviews, and a survey</strong> with many of our front-line Evolvers. We were able to make ample observations, identify trends, and produce several insights that align with the original CX needs list. During the interview stage, our process was cut short when were learned of Xcelerate's limitations. (Xcelerate is the platform we planned to build this in.)</p>
 
-		<h3>Shadow Sessions</h3>
-		<p>We shadowed Evolvers from Trust & Safety, Guest Experience, Owner Support, and Booking Management over twelve 45 minute sessions focusing specifically on Airbnb Support cases, live chats, and calls.</p>
+				<h3>Shadow Sessions</h3>
+				<p>We shadowed Evolvers from Trust & Safety, Guest Experience, Owner Support, and Booking Management over twelve 45 minute sessions focusing specifically on Airbnb Support cases, live chats, and calls.</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={cepredroutes} width="100%" alt="Example of one of our Red Routes exercises" />
+				</div>
+				<p class="img-alt">Example of one of our Red Routes exercises.</p>
+			</div>
+			<div class="right-column">
+				<h3>Interviews</h3>
+				<p>We interviewed a new set of Evolvers from the same CX teams. Our interview scripts were developed from our shadow session data synthesis. The questions and activities, which included a <strong>Red Routes</strong> exercise, focused on areas we wanted to further explore and a few subjects we hadn’t observed, but felt required investigation.</p>
+				<p>We also interviewed a set of core Salesforce developers close to the CEP project. Our aim was to present our findings and obtain high-level feedback on some potential solutions.</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={cepsurvey} width="100%" alt="Some responses from our Pieces of Information Survey" />
+				</div>
+				<p class="img-alt">Some responses from our Pieces of Information Survey.</p>
+			</div>
+			<div class="right-column">
+				<h3>Survey</h3>
+				<p>We conducted a survey that had an overwhelming response from our CXers (thank you!) focused on what we called, “Pieces of Information.” Pieces of Information are contextual fields in Salesforce that we’d like to surface, at a glance, when an Evolver is interacting with a customer. The survey asked our Evolvers (sorted by their role) to rank how frequently they need it when interacting with their customers.</p>
+			</div>
+		</section>
+
+		<b class="hr"></b>
+
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true">
+					<img src={cepinsights} width="100%" alt="Pie chart of different opportunities identified with CEP" />
+				</div>
+				<p class="img-alt">Pie chart of different opportunities identified with CEP.</p>
+			</div>
+			<div class="right-column">
+				<h2 class="margin-top-0">Top Insights</h2>
+				<p class="large-text">We synthesized all of the notes from our shadow sessions, interviews, and prioritization activities into 7 “issue buckets.” The chart below is the sum of mentions of each of these issues and the pain involved in the current systems.</p>
+				<p>I'm going to focus on the top 4 issues that I believe the right CEP interface could solve.</p>
+
+				<h3>Issue Definitions:</h3>
+				<ul>
+					<li><strong>Workflow-</strong> Case management, workforce allocations, wallboards and call controls, etc.</li>
+					<li><strong>Interaction Aid-</strong> Canned responses, email templates, knowledge base, etc.</li>
+					<li><strong>Contextual Info-</strong> At-a-glance customer, booking, property information, identity verification, etc.</li>
+					<li><strong>Interaction History-</strong> Customer communication history timeline, activity feed, etc.</li>
+					<li><strong>Airbnb-</strong> Airbnb api integrations, chat, support cases, etc.</li>
+					<li><strong>CMS-</strong> General improvements to Salesforce objects and apps, map views, TripAssist integrations, listing search, owner account integrations and improvements</li>
+					<li><strong>Chat-</strong> Live chat improvements, chat bot, etc.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={cepworkflow} width="100%" alt="Notes consolidation concerning the Workflow opportunity" />
+				</div>
+				<p class="img-alt">Notes consolidation concerning the Workflow opportunity.</p>
+			</div>
+			<div class="right-column">
+				<h3>Workflow</h3>
+				<p class="text-large-italic">Case management is a painful, manual process and provides little insight into workforce allocation needs</p>
+				
+				<p>The current system provides little to no automation for case assignment, urgency, status, and reassignment causing cases to get lost in the shuffle and greatly affecting our customer NPS and bottom line.</p>
+				<ul>
+					<li>On Airbnb Support cases: “…And then you know, just by the time it takes to actually get to the appropriate queue we're already past the deadline that Airbnb is giving us for certain scenarios.”</li>
+				</ul>
 		
-		<img src={shadownotes} width="100%" alt="Shadow session notes consolidation" />
-		<p class="img-alt">Consolidation of the notes from all the shadow sessions.</p>
+				<p>The current system has little to no case creation and association automation for our Evolvers greatly increasing our cost-to-serve. This forces front-line workers to manually make case associations with interactions, other cases, and salesforce objects and create cases where and if they feel necessary. The process is time-consuming and often creates incomplete interaction histories and complete failures to service.</p>
+		
+				<p>The current system offers little to no insight on how our workforce could be most efficiently allocated. Without proper automation for assignment, urgency, and escalation some roles have slow days while others find themselves overwhelmed.</p>
+				<ul>
+					<li>On overwhelming workloads: “You had a case that you took six hours ago with every intent to do, but now you can't get to it…now it's my weekend, and I thought I had time.”</li>
+					<li>On workforce misallocation: “…because there could be so many of us working in them at a time, I actually grabbed 10 [cases] at a time and just accept those. …I grabbed 10 at a time because we do kind of stumble over each other sometimes and that way it doesn't happen as much.”</li>
+				</ul>
+		
+				<p>The current system is a seemingly ever-increasing set of disparate apps that each attempt to solve very specific problems. This causes our Evolvers to have to swivel between dozens of tabs and windows to accomplish tasks that should be simple.</p>
+			</div>
+		</section>
 
-		<h3>Interviews</h3>
-		<p>We interviewed a new set of Evolvers from the same CX teams. Our interview scripts were developed from our shadow session data synthesis. The questions and activities, which included a <strong>Red Routes</strong> exercise, focused on areas we wanted to further explore and a few subjects we hadn’t observed, but felt required investigation.</p>
-		<p>We also interviewed a set of core Salesforce developers close to the CEP project. Our aim was to present our findings and obtain high-level feedback on some potential solutions.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={cepinteraction} width="100%" alt="Notes consolidation concerning the Interaction Aid opportunity" />
+				</div>
+				<p class="img-alt">Notes consolidation concerning the Interaction Aid opportunity.</p>
+			</div>
+			<div class="right-column">
+				<h3>Interaction Aid</h3>
+				<p class="text-large-italic">Our customer interaction libraries are manual, various, disparate, and often out-of-date.</p>
+				
+				<p>When in need of a canned response in the current system, each Evolver has their own system for handling their library of options. This is usually in the form of various Google docs, Word docs, Text Blaze libraries, and personal libraries. The process is manual, which causes our libraries to become out-of-date and our communication inconsistent.</p>
 
-		<img src={cepredroutes} width="100%" alt="Example of one of our Red Routes exercises" />
-		<p class="img-alt">Example of one of our Red Routes exercises.</p>
+				<p>In the current system, email templates are disparate and inconsistent and contextual information doesn't populate automatically. Depending where emails are sent from and what templates are being used, the emails don't even always have the consistent layouts and UI elements.</p>
+				<ul>
+					<li>On constructing an customer email in Salesforce: “Here, we always add our blank HTML to show that it's Evolve, or at least I do…”</li>
+				</ul>
+			</div>
+		</section>
 
-		<h3>Survey</h3>
-		<p>We conducted a survey that had an overwhelming response from our CXers (thank you!) focused on what we called, “Pieces of Information.” Pieces of Information are contextual fields in Salesforce that we’d like to surface, at a glance, when an Evolver is interacting with a customer. The survey asked our Evolvers (sorted by their role) to rank how frequently they need it when interacting with their customers.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={cepinfo} width="100%" alt="Notes consolidation concerning the Contextual Info opportunity" />
+				</div>
+				<p class="img-alt">Notes consolidation concerning the Contextual Info opportunity.</p>
+			</div>
+			<div class="right-column">
+				<h3>Contextual Info</h3>
+				<p class="text-large-italic">Contextual information about our customers is not readily available when our Evolvers initiate an interaction.</p>
 
-		<img src={cepsurvey} width="100%" alt="Some responses from our Pieces of Information Survey" />
-		<p class="img-alt">Some responses from our Pieces of Information Survey.</p>
+				<p>In our current system, every time an Evolver accepts a call or chat they have a series of Salesforce tabs they must open to get the full picture of this customers information.</p>
 
-		<b class="hr"></b>
+				<p>The current system of disparate apps and salesforce tabs literally takes our Evolvers focus away from that customer interaction.</p>
 
-		<h2>Top Insights</h2>
-		<p class="large-text">We synthesized all of the notes from our shadow sessions, interviews, and prioritization activities into 7 “issue buckets.” The chart below is the sum of mentions of each of these issues and the pain involved in the current systems.</p>
-		<p>I’m going to focus on the top 4 issues that I believe the right CEP interface could solve.</p>
-		<p><strong>Issue Definitions:</strong></p>
-		<ul>
-			<li><strong>Workflow-</strong> Case management, workforce allocations, wallboards and call controls, etc.</li>
-			<li><strong>Interaction Aid-</strong> Canned responses, email templates, knowledge base, etc.</li>
-			<li><strong>Contextual Info-</strong> At-a-glance customer, booking, property information, identity verification, etc.</li>
-			<li><strong>Interaction History-</strong> Customer communication history timeline, activity feed, etc.</li>
-			<li><strong>Airbnb-</strong> Airbnb api integrations, chat, support cases, etc.</li>
-			<li><strong>CMS-</strong> General improvements to Salesforce objects and apps, map views, TripAssist integrations, listing search, owner account integrations and improvements</li>
-			<li><strong>Chat-</strong> Live chat improvements, chat bot, etc.</li>
-		</ul>
+				<p>In our current system, the ability to establish the identity of a customer we're interacting with, and their history with Evolve, is manual and this work does not always carry over to future interactions.</p>
+				<ul>
+					<li>Trying to identify a customer: “There's often times who are from 4 to 20 different accounts to look at, because somebody may have changed their contact information multiple times.”</li>
+					<li>Having to guess a customer's identity: “So this one is actually more of a guess than anything that it's her, but I know this name, I've talked to her on the phone, a couple of times, I've seen her name pop up on our slack channels…”</li>
+				</ul>
+			</div>
+		</section>
 
-		<img src={cepinsights} width="100%" alt="Pie chart of different opportunities identified with CEP" />
-		<p class="img-alt">Pie chart of different opportunities identified with CEP.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={cephistory} width="100%" alt="Notes consolidation concerning the Interaction History opportunity" />
+				</div>
+				<p class="img-alt">Notes consolidation concerning the Interaction History opportunity.</p>
+			</div>
+			<div class="right-column">
+				<h3>Interaction History</h3>
+				<p class="text-large-italic">Interaction histories with our customers are not in a single, chronological view, but spread across several locations and platforms.</p>
 
-		<h3>Workflow</h3>
-		<p class="text-large-italic">Case management is a painful, manual process and provides little insight into workforce allocation needs</p>
+				<p>In our current system, every time an Evolver accepts a call or chat they have a series of Salesforce tabs they must open to get the full picture of this customers information.</p>
 
-		<img src={cepworkflow} width="100%" alt="Notes consolidation concerning the Workflow opportunity" />
-		<p class="img-alt">Notes consolidation concerning the Workflow opportunity.</p>
+				<p>The current system of disparate apps and salesforce tabs literally takes our Evolvers focus away from that customer interaction.</p>
 
-		<p><strong>The current system provides little to no automation for case assignment, urgency, status, and reassignment causing cases to get lost in the shuffle and greatly affecting our customer NPS and bottom line.</strong></p>
-		<ul>
-			<li>On Airbnb Support cases: “…And then you know, just by the time it takes to actually get to the appropriate queue we're already past the deadline that Airbnb is giving us for certain scenarios.”</li>
-		</ul>
-
-		<p><strong>The current system has little to no case creation and association automation for our Evolvers greatly increasing our cost-to-serve. This forces front-line workers to manually make case associations with interactions, other cases, and salesforce objects and create cases where and if they feel necessary. The process is time-consuming and often creates incomplete interaction histories and complete failures to service.</strong></p>
-
-		<p><strong>The current system offers little to no insight on how our workforce could be most efficiently allocated. Without proper automation for assignment, urgency, and escalation some roles have slow days while others find themselves overwhelmed.</strong></p>
-		<ul>
-			<li>On overwhelming workloads: “You had a case that you took six hours ago with every intent to do, but now you can't get to it…now it's my weekend, and I thought I had time.”</li>
-			<li>On workforce misallocation: “…because there could be so many of us working in them at a time, I actually grabbed 10 [cases] at a time and just accept those. …I grabbed 10 at a time because we do kind of stumble over each other sometimes and that way it doesn't happen as much.”</li>
-		</ul>
-
-		<p><strong>The current system is a seemingly ever-increasing set of disparate apps that each attempt to solve very specific problems. This causes our Evolvers to have to swivel between dozens of tabs and windows to accomplish tasks that should be simple.</strong></p>
-
-		<h3>Interaction Aid</h3>
-		<p class="text-large-italic">Our customer interaction libraries are manual, various, disparate, and often out-of-date.</p>
-
-		<img src={cepinteraction} width="100%" alt="Notes consolidation concerning the Interaction Aid opportunity" />
-		<p class="img-alt">Notes consolidation concerning the Interaction Aid opportunity.</p>
-
-		<p><strong>When in need of a canned response in the current system, each Evolver has their own system for handling their library of options. This is usually in the form of various Google docs, Word docs, Text Blaze libraries, and personal libraries. The process is manual, which causes our libraries to become out-of-date and our communication inconsistent. </strong></p>
-
-		<p><strong>In the current system, email templates are disparate and inconsistent and contextual information doesn't populate automatically. Depending where emails are sent from and what templates are being used, the emails don't even always have the consistent layouts and UI elements.</strong></p>
-		<ul>
-			<li>On constructing an customer email in Salesforce: “Here, we always add our blank HTML to show that it's Evolve, or at least I do…”</li>
-		</ul>
-
-		<h3>Contextual Info</h3>
-		<p class="text-large-italic">Contextual information about our customers is not readily available when our Evolvers initiate an interaction.</p>
-
-		<img src={cepinfo} width="100%" alt="Notes consolidation concerning the Contextual Info opportunity" />
-		<p class="img-alt">Notes consolidation concerning the Contextual Info opportunity.</p>
-
-		<p><strong>In our current system, every time an Evolver accepts a call or chat they have a series of Salesforce tabs they must open to get the full picture of this customers information.</strong></p>
-
-		<p><strong>The current system of disparate apps and salesforce tabs literally takes our Evolvers focus away from that customer interaction.</strong></p>
-
-		<p><strong>In our current system, the ability to establish the identity of a customer we're interacting with, and their history with Evolve, is manual and this work does not always carry over to future interactions.</strong></p>
-		<ul>
-			<li>Trying to identify a customer: “There's often times who are from 4 to 20 different accounts to look at, because somebody may have changed their contact information multiple times.”</li>
-			<li>Having to guess a customer's identity: “So this one is actually more of a guess than anything that it's her, but I know this name, I've talked to her on the phone, a couple of times, I've seen her name pop up on our slack channels…”</li>
-		</ul>
-
-		<h3>Interaction History</h3>
-		<p class="text-large-italic">Interaction histories with our customers are not in a single, chronological view, but spread across several locations and platforms.</p>
-
-		<img src={cephistory} width="100%" alt="Notes consolidation concerning the Interaction History opportunity" />
-		<p class="img-alt">Notes consolidation concerning the Interaction History opportunity.</p>
-
-		<p><strong>In the current system, our Evolvers have to dig through disparate bits of information to piece together a narrative of what has happened. This greatly limits our efficiency and ability to serve.</strong></p>
-		<ul>
-			<li>Customer on hold: “So I'm using deductive reasoning on this one… She mentions that they're waiting for the payment method confirmation… They have payment error that's pending TA approval, which likely means that it's booking.com where GX Our Guest experience team will be reaching out to the owner or the guest here… Okay, so it's been about 2 minutes. I'll ask if she's still there.”</li>
-		</ul>
-
-		<p><strong>Without a single, chronological view of Evolve's interaction history with a customer, every case can become hunt for proof of previous interactions or a “he said, she said” situation.</strong></p>
-		<ul>
-			<li>“My numbers aren't adding up to what my manager is getting in those… so I've been trying to figure out what pacification if any of an amount we would have to get to and then figuring out exactly what's all going on.”</li>
-		</ul>
-
-		<p><strong>Without a single, chronological view of Evolve's interaction history with a customer, Evolve isn't able to pull useful data from our interactions to inform workforce allocation, staffing, evaluate customer NPS, etc.</strong></p>
-
-		<p><strong>In the current system, linking interactions with accounts, cases, bookings, listings, topics, etc., is a mostly manual process limiting Evolve's ability to collect data to inform where efficiencies could be gained.</strong></p>
-		<ul>
-			<li>So you can have this great chat- you didn't actually link it right there, somebody else later comes back and goes to look for it. They will not see it.”</li>
-		</ul>
+				<p>In our current system, the ability to establish the identity of a customer we're interacting with, and their history with Evolve, is manual and this work does not always carry over to future interactions.</p>
+				<ul>
+					<li>Trying to identify a customer: “There's often times who are from 4 to 20 different accounts to look at, because somebody may have changed their contact information multiple times.”</li>
+					<li>Having to guess a customer's identity: “So this one is actually more of a guess than anything that it's her, but I know this name, I've talked to her on the phone, a couple of times, I've seen her name pop up on our slack channels…”</li>
+				</ul>
+			</div>
+		</section>
 
 		<b class="hr"></b>
 
-		<h2>Summary</h2>
-		<p class="text-large">Our research has shown the current system presents a handful of recurring pain points that limit our Evolver’s ability to serve.</p>
-
-		<strong>Inefficiencies concerning:</strong>
-		<ul>
-			<li>Case management, urgency, status, and escalation</li>
-			<li>Workforce allocation</li>
-			<li>Canned responses and email templates</li>
-			<li>Fragmented customer interaction histories</li>
-			<li>How contextual information is stored and displayed</li>
-		</ul>
-
-		<strong>Lack of data informing:</strong>
-		<ul>
-			<li>Case management, urgency, status, and escalation</li>
-			<li>Workforce allocation</li>
-			<li>Knowledge base</li>
-			<li>CMS improvements</li>
-		</ul>
-		<p><strong>I believe all of these issues are connected and the development of a solution for one will begin to alleviate the pain of, and inform how best to solution the rest.</strong></p>
+		<section>
+			<div class="left-column">
+				
+			</div>
+			<div class="right-column">
+				<h2 class="margin-top-0">Summary</h2>
+				<p class="text-large">Our research has shown the current system presents a handful of recurring pain points that limit our Evolver’s ability to serve.</p>
+		
+				<strong>Inefficiencies concerning:</strong>
+				<ul>
+					<li>Case management, urgency, status, and escalation</li>
+					<li>Workforce allocation</li>
+					<li>Canned responses and email templates</li>
+					<li>Fragmented customer interaction histories</li>
+					<li>How contextual information is stored and displayed</li>
+				</ul>
+		
+				<strong>Lack of data informing:</strong>
+				<ul>
+					<li>Case management, urgency, status, and escalation</li>
+					<li>Workforce allocation</li>
+					<li>Knowledge base</li>
+					<li>CMS improvements</li>
+				</ul>
+				<p class="margin-bottom-0"><strong>I believe all of these issues are connected and the development of a solution for one will begin to alleviate the pain of, and inform how best to solution the rest.</strong></p>
+			</div>
+		</section>
 
 		<b class="hr"></b>
 
-		<h2>Recommendations</h2>
+		<section>
+			<div class="left-column">
+				
+			</div>
+			<div class="right-column">
+				<h2 class="margin-top-0">Recommendations</h2>
 
-		<p class="text-large-italic">Limit the Swivel.</p>
-		<p>Choose a solution for CEP that allows us to solve all of the aforementioned issues, over time, between our CEP platform and our CMS. Don’t choose a temporary solution that solves a larger portion of these issues now and continues to force our Evolvers to swivel between our CMS, our CEP, and several other applications.</p>
+				<p class="text-large-italic">Limit the Swivel.</p>
+				<p>Choose a solution for CEP that allows us to solve all of the aforementioned issues, over time, between our CEP platform and our CMS. Don’t choose a temporary solution that solves a larger portion of these issues now and continues to force our Evolvers to swivel between our CMS, our CEP, and several other applications.</p>
 
-		<p class="text-large-italic">Tackle data-producing issues first.</p>
-		<p>In product development, an MVP can only accomplish so much. Choose to tackle the issues that will give us the most data to inform what we work on next. Many efficiencies can also be gained with quick and simple updates to our Salesforce UIs while our CEP is in iterative development.</p>
+				<p class="text-large-italic">Tackle data-producing issues first.</p>
+				<p>In product development, an MVP can only accomplish so much. Choose to tackle the issues that will give us the most data to inform what we work on next. Many efficiencies can also be gained with quick and simple updates to our Salesforce UIs while our CEP is in iterative development.</p>
 
-		<p class="text-large-italic">Focus on the interaction.</p>
-		<p>Choose a solution that puts all the required information in front of our Evolver’s face the second they initiate an interaction with a customer. A customers account information, listings, bookings, cases, and complete interaction history with Evolve should be no more than a single scroll or click away. With the right CEP solution, integration, and design, I believe this to be achievable.
-		</p>
+				<p class="text-large-italic">Focus on the interaction.</p>
+				<p>Choose a solution that puts all the required information in front of our Evolver’s face the second they initiate an interaction with a customer. A customers account information, listings, bookings, cases, and complete interaction history with Evolve should be no more than a single scroll or click away. With the right CEP solution, integration, and design, I believe this to be achievable.
+				</p>
+			</div>
+		</section>
 	</main>
 </Layout>
 
 <style lang="scss">
 	main {
-		max-width: 90ch;
 
 		h1 {
 			font-size: 2.25rem;
@@ -237,6 +307,41 @@ import cephistory from '/images/cep-history.jpg';
 		h3 {
 			margin-block-start: 3rem;
 			font-size: 1.5rem;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		section {
+			display: flex;
+			flex-direction: row;
+
+			.left-column {
+
+				.img-alt:last-of-type {
+					margin-block-end: 0;
+				}
+			}
+		}
+		.left-column {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			padding-right: 2rem;
+		}
+		.right-column {
+			width: 70ch;
+		}
+
+		p {
+			font-size: 1.125rem;
+		}
+
+		.mindmap-scroll {
+			height: 420px;
+			overflow-y: auto;
+		}
+		.start-margin-3 {
+			margin-top: 3rem;
 		}
 	}
 </style>

@@ -1,4 +1,6 @@
 ---
+import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
+
 export interface Props {
 	title: string;
 }
@@ -18,6 +20,7 @@ import linkedin from '/images/linkedin-icon.svg';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<Lightbox />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -116,16 +119,19 @@ import linkedin from '/images/linkedin-icon.svg';
 		}
 	}
 	p {
-		margin-block-start: .5em;
-    	margin-block-end: .5em;
 		line-height: 1.6;
 
 		&.img-alt {
+			margin-block-start: .5rem;
+			margin-block-end: 1.5rem;
 			font-weight: 300;
 			font-style: italic;
 			font-size: 0.875rem;
 			text-align: center;
 		}
+	}
+	ul {
+		line-height: 1.6;
 	}
 	.text-large {
 		font-size: 1.25rem;
@@ -138,7 +144,12 @@ import linkedin from '/images/linkedin-icon.svg';
 
 	// Utilities
 	.margin-top-0 {
-		margin-top: 0;
+		margin-top: 0 !important;
+		margin-block-start: 0 !important;
+	}
+	.margin-bottom-0 {
+		margin-bottom: 0 !important;
+		margin-block-end: 0 !important;
 	}
 	.margin-top-16 {
 		margin-top: 1rem;
@@ -291,11 +302,6 @@ import linkedin from '/images/linkedin-icon.svg';
 		.subtitle {
 			margin: 0 0;
 			font-size: 1.25rem;
-		}
-		ul {
-			margin-block-start: .5rem;
-			margin-block-end: .5rem;
-			padding-inline-start: 1.5rem;
 		}
 
 		header {
