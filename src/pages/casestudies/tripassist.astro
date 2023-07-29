@@ -5,6 +5,11 @@ import Button from '../../components/Button.astro';
 // Images
 import tamockup from '/images/ta-mockup.png';
 import airlinemask from '/images/airline-mask.jpeg';
+import quoteflow from '/images/ta-quote-flow.png';
+import quotepage from '/images/ta-quote-page.png';
+import exception from '/images/ta-exception.png';
+import canceloutside from '/images/ta-cancel-outside.png';
+import partialrefund from '/images/ta-partial-refund.png';
 ---
 
 <Layout title="Case Study: TripAssist">
@@ -22,58 +27,152 @@ import airlinemask from '/images/airline-mask.jpeg';
 			/>
 		</div>
 
-		<h2>Before you help others, you must first help yourself</h2>
-		<p>“Customer First” is something that is drilled into us as designers, but after spending weeks shadowing the CX teams at Evolve I realized I was witnessing why the airline rule is so important- before you help others, you must first help yourself. Our booking modification and cancellation tools were so basic, buggy, and manual that it was not only making our teams miserable, it was degrading our customer experience as well.</p>
+		<b class="hr"></b>
 
-		<img src={airlinemask} width="100%" alt="Instructions for putting on an airline oxygen mask" />
-		<p class="img-alt">Instructions for putting on an airline oxygen maskp.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true">
+					<img src={airlinemask} width="100%" alt="Instructions for putting on an airline oxygen mask" />
+				</div>
+				<p class="img-alt">Instructions for putting on an airline oxygen mask.</p>
+			</div>
+			<div class="right-column">
+				<h2 class="margin-top-0">Before you help others, you must first help yourself</h2>
+				<p>“Customer First” is something that is drilled into us as designers, but after spending weeks shadowing the CX teams at Evolve I realized I was witnessing why the airline rule is so important- before you help others, you must first help yourself. Our booking modification and cancellation tools were so basic, buggy, and manual that it was not only making our teams miserable, it was degrading our customer experience as well.</p>
 
-		<h3>The Flywheel</h3>
-		<p>At Evolve, the company has spent years being “owner-focused,” meaning we always saw our customers as being the owners of the vacation rental properties we promoted. More recently, leadership did some soul-searching and decided we need to be “hospitality-focused,” meaning we see our guests (those that stay at our vacation rental properties) and Evolvers (employees of Evolve) as equally important customers on the flywheel of our business.</p>
-		<p>In 2018, Evolve released Stripe integration so our credit card transactions would be more smooth and secure. During the CX All Hands meeting announcing the release, all CX employees were giving a physical calculator for all of the complicated manual calculations they were going to have to learn to do when modifying or cancelling a booking. Needless to say, no one was happy about this.</p>
-		<p>Even before I started my discovery for this project, I knew it was my goal to make really make our Evolvers feel heard during every step of the process.</p>
+				<h3>The Flywheel</h3>
+				<p>At Evolve, the company has spent years being “owner-focused,” meaning we always saw our customers as being the owners of the vacation rental properties we promoted. More recently, leadership did some soul-searching and decided we need to be “hospitality-focused,” meaning we see our guests (those that stay at our vacation rental properties) and Evolvers (employees of Evolve) as equally important customers on the flywheel of our business.</p>
+				<p>In 2018, Evolve released Stripe integration so our credit card transactions would be more smooth and secure. During the CX All Hands meeting announcing the release, all CX employees were giving a physical calculator for all of the complicated manual calculations they were going to have to learn to do when modifying or cancelling a booking. Needless to say, no one was happy about this.</p>
+				<p>Even before I started my discovery for this project, I knew it was my goal to make really make our Evolvers feel heard during every step of the process.</p>
+			</div>
+		</section>
 
-		<h3>eNPS = NPS</h3>
-		<p>Our goal for the project, which we named TripAssist, was to not only automate all of these complicated calculations, but to create flows that were intuitive enough that a brand new Evolve could go in with very little training and help our customers.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={quoteflow} width="100%" alt="Screenshot from the Airbnb Quote flow in TripAssist" />
+				</div>
+				<p class="img-alt">Screenshot from the Airbnb Quote flow in TripAssist.</p>
+			</div>
+			<div class="right-column">
+				<h3>eNPS = NPS</h3>
+				<p>Our goal for the project, which we named TripAssist, was to not only automate all of these complicated calculations, but to create flows that were intuitive enough that a brand new Evolve could go in with very little training and help our customers.</p>
 
-		<p><strong>The metrics we chose to focus on included:</strong></p>
-		<ol>
-			<li>Improving Evolver eNPS</li>
-			<li>Decreasing our CX turnover rate</li>
-			<li>Decreasing training time for new Evolvers</li>
-			<li>Decreasing hold times on calls</li>
-			<li>Decreasing open time on cases</li>
-			<li>Improve overall Evolve NPS</li>
-			<li>Increasing transaction accuracy</li>
-		</ol>
+				<p><strong>The metrics we chose to focus on included:</strong></p>
+				<ol>
+					<li>Improving Evolver eNPS</li>
+					<li>Decreasing our CX turnover rate</li>
+					<li>Decreasing training time for new Evolvers</li>
+					<li>Decreasing hold times on calls</li>
+					<li>Decreasing open time on cases</li>
+					<li>Improve overall Evolve NPS</li>
+					<li>Increasing transaction accuracy</li>
+				</ol>
 
-		<h3>My Role</h3>
-		<p>The entire project was lead by myself as the sole UX/Product Designer and a Project Manager, who was indispensable and helped me with research and keeping everything organized and on track. Our discovery phase started in June 2021.</p>
+				<h3>My Role</h3>
+				<p>The entire project was lead by myself as the sole UX/Product Designer and a Project Manager, who was indispensable and helped me with research and keeping everything organized and on track. Our discovery phase started in June 2021.</p>
+			</div>
+		</section>
 
-		<h3>Building Trust from the Ground Up</h3>
-		<p>When I came into this project, I knew next to nothing about how any of these transactions worked or what tools the team already had or didn't have at their disposal. My PM was already very familiar with an existing tool that had been designed a year earlier in an attempt to automate some simple calculations, but it didn't work at least as often as it did. I very specifically ask to not see the existing tool, what everyone called the Mod Tool, as I wanted to take the time to learn about the team's problems and come up with fresh solutions.</p>
-		<p>We determined our first iteration of TripAssist would be based on the everyday challenges faced by our pre-stay booking modification team (RM) and our pre-stay booking cancellation team (CARE). These teams had the longest hold times on calls, most inaccurate calculations, lowest retention rate, and almost completely lacked the ability to make hospitality exceptions. Hospitality Exceptions is what we call giving our guests a discount, refund, etc when something has gone wrong and it's the best way to help them out of a tough spot.</p>
-		<p>Improving all of these metrics would require that we build a tool our front-line Evolvers trust.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={quotepage} width="100%" alt="Screenshot from the Quote page on an Addition in TripAssist" />
+				</div>
+				<p class="img-alt">Screenshot from the Quote page on an Addition in TripAssist.</p>
+			</div>
+			<div class="right-column">
+				<h3>Building Trust from the Ground Up</h3>
+				<p>When I came into this project, I knew next to nothing about how any of these transactions worked or what tools the team already had or didn't have at their disposal. My PM was already very familiar with an existing tool that had been designed a year earlier in an attempt to automate some simple calculations, but it didn't work at least as often as it did. I very specifically asked to not see the existing tool, what everyone called the Mod Tool, as I wanted to take the time to learn about the team's problems and come up with fresh solutions.</p>
+				<p>We determined our first iteration of TripAssist would be based on the everyday challenges faced by our pre-stay booking modification team (RM) and our pre-stay booking cancellation team (CARE). These teams had the longest hold times on calls, most inaccurate calculations, lowest retention rate, and almost completely lacked the ability to make hospitality exceptions. Hospitality Exceptions is what we call giving our guests a discount, refund, etc when something has gone wrong and it's the best way to help them out of a tough spot.</p>
+				<p>Improving all of these metrics would require that we build a tool our front-line Evolvers trust.</p>
 
-		<h3>A Day in the Life</h3>
-		<p>Our discovery process began by shadowing 7 members of the RM team (modifications-focused) and 14 members of the CARE team (cancellations-focused). The members we met with had the full spectrum of CX experience from new hires to management. We met with them on over Zoom so we could listen to both ends of the calls they took and when they weren't on calls they talked us through case work. Both my PM, Kareem, and I took notes on everything we saw. We made sure to tag our notes for future organization.</p>
-		<p>What we noticed were extremely long hold times to execute simple adjustments, extremely complicated manual calculations, and far too many clicks to even arrive in the places where necessary entry fields or information existed. Outside of just transaction-related issues, we took not of other inefficiencies like cumbersome email sending, too much specialization in service resulting in several transfers on calls, and the use of over a dozen third-party services in an attempt to digitize the entire experience.</p>
-		<p>Every user had dozens of tabs open in both their browsers and Salesforce because even the simplest cases took longer to complete than it took for the next call to come in and cases would just pile up on one another. It was nothing but impressive they were able to keep all this information in their heads, interact with our customers, and do complicated financial math all day every day.</p>
+				<h3>A Day in the Life</h3>
+				<p>Our discovery process began by shadowing 7 members of the RM team (modifications-focused) and 14 members of the CARE team (cancellations-focused). The members we met with had the full spectrum of CX experience from new hires to management. We met with them on over Zoom so we could listen to both ends of the calls they took and when they weren't on calls they talked us through case work. Both my PM and I took notes on everything we saw. We made sure to tag our notes for future organization.</p>
+				<p>What we noticed were extremely long hold times to execute simple adjustments, extremely complicated manual calculations, and far too many clicks to even arrive in the places where necessary entry fields or information existed. Outside of just transaction-related issues, we took not of other inefficiencies like cumbersome email sending, too much specialization in service resulting in several transfers on calls, and the use of over a dozen third-party services in an attempt to digitize the entire experience.</p>
+				<p>Every user had dozens of tabs open in both their browsers and Salesforce because even the simplest cases took longer to complete than it took for the next call to come in and cases would just pile up on one another. It was nothing but impressive they were able to keep all this information in their heads, interact with our customers, and do complicated financial math all day every day.</p>
+			</div>
+		</section>
 
-		<h3>Data Distillery</h3>
-		<p>After the completion of our shadow sessions, Kareem and I sifted through our mountains of notes and entered them into a massive spreadsheet that would become out data hub for TripAssist. This first page of our spreadsheet contained each note taken, who recorded it, who was being shadowed, the team they were on, and their title. Once all of this was entered we added some columns to our spreadsheet where we could indicate if the note was Transaction-Related (as in something we could definitely solve with TripAssist), a general opportunity (something we could improve in the future), and if we thought we might derive an interview question from it. We also recorded the general emotion we observed during each other these notes.</p>
-		<p>The products of this data distillation were two interview scripts for our CARE and RM Evolvers and a Red Routes chart with a list of “features” we thought could be useful in TripAssist.</p>
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={exception} width="100%" alt="Screenshot of a Hospitality Exception in TripAssist" />
+				</div>
+				<p class="img-alt">Screenshot of a Hospitality Exception in TripAssist.</p>
+			</div>
+			<div class="right-column">
+				<h3>Data Distillery</h3>
+				<p>After the completion of our shadow sessions, we sifted through our mountains of notes and entered them into a massive spreadsheet that would become out data hub for TripAssist. This first page of our spreadsheet contained each note taken, who recorded it, who was being shadowed, the team they were on, and their title. Once all of this was entered we added some columns to our spreadsheet where we could indicate if the note was Transaction-Related (as in something we could definitely solve with TripAssist), a general opportunity (something we could improve in the future), and if we thought we might derive an interview question from it. We also recorded the general emotion we observed during each other these notes.</p>
+				<p>The products of this data distillation were two interview scripts for our CARE and RM Evolvers and a Red Routes chart with a list of “features” we thought could be useful in TripAssist.</p>
+		
+				<h3>What Does Hospitality Mean to You?</h3>
+				<p>We conducted interviews with 9 members of the RM team and 5 members of the CARE team in UserZooom Go. This tool allowed us to take our notes along side the video and organize our tags more efficiently.</p>
+				<p>We began every interview by asking our Evolvers, “What does hospitality mean to you?.” It was important for us to establish where the general mindset was concerning interacting with our customers and where we should focus to maximize improving our CX.</p>
+				<p>We asked a variety of questions from what part of their current toolset they love and hate, which amusingly ended up being the currently Mod Tool, more often than not, for both, because they loved automated calculations…when they <i>worked</i>.</p>
+				<p>Our Red Routes exercise consisted of card sorting the usefulness of our theoretical “features” we were thinking of adding to TripAssist based on our shadow observations. After we explained the intention of each feature, the interviewees were asked to sort them on a grid that ranked how often they might be used and by how much of their teams. </p>
+			</div>
+		</section>
 
-		<h3>What Does Hospitality Mean to You?</h3>
-		<p>We conducted interviews with 9 members of the RM team and 5 members of the CARE team in UserZooom Go. This tool allowed us to take our notes along side the video and organize our tags more efficiently.</p>
-		<p>We began every interview by asking our Evolvers, “What does hospitality mean to you?.” It was important for us to establish where the general mindset was concerning interacting with our customers and where we should focus to maximize improving our CX.</p>
-		<p>We asked a variety of questions from what part of their current toolset they love and hate, which amusingly ended up being the currently Mod Tool, more often than not, for both, because they loved automated calculations…when they <i>worked</i>.</p> 
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={canceloutside} width="100%" alt="Screenshot of cancelling outside policy in TripAssist" />
+				</div>
+				<p class="img-alt">Screenshot of cancelling outside policy in TripAssist.</p>
+			</div>
+			<div class="right-column">
+				<h3>Even more data</h3>
+				<p>After all of our interview sessions, we had even more data to sift through- some of which confirmed our previous suspicions, and some new insights. We collated all of our notes, as we did previously with the shadow sessions, and assigned values to our Red Routes cards, which we then averaged per feature per team. We also decided we wanted to collect the “pain” values for each of the issues and processes our new features would address and collected these via a survey we sent to our interviewees.</p>
+				<p>We knew being able to complete every feature we thought of for our MVP would be impossible with our small team, so we wanted to take all this data and figure out a way to prioritize features. We created a spreadsheet and took our Red Routes values, Pain scores, and added UX and Development effort values and played around with their weights until we had a list our stakeholders were comfortable with.</p>
+				<p>Once we had a list of features to work with, we created a Mind Map to organize our ideas and figure out how they might all fit into the framework we were imagining.</p>
+
+				<h3>Working with Management</h3>
+				<p>Before we starting working on lofi prototypes, we wanted to make sure we took the time to get leadership's voice and buy-in on what we were about to build.</p>
+				<p>We started with a 2-session workshop with CX management, leads, and executives. We started with an Empathy Mapping exercise. It honestly kinda bummed everyone out, because what our customer service reps have to deal with everyday is legitimately rough, but it served as a great primer for prioritization. Our prioritization was a dot voting exercise, with some sketches to serve as a visual guide for some of the more inventive features. This data was also applied to our previously-mentioned prioritization spreadsheet.</p>
+				<p>After these workshops, we started working on our lofi prototypes and began a bi-weekly update meeting to keep leadership informed on our progress and demo anything we'd completed and tested.</p>
+
+				<h3>Finally, the Design Part</h3>
+				<p>We started creating lofi wireframes and prototypes for all of our features. We ended up splitting up Booking Modifications and Cancellations into two separate sections to simplify our flows- particularly because they would be primarily used by two completely separate teams. We also started weekly meetups with our teams to demo our progress, collect feedback, and applied that feedback to our designs.</p>
+				<p>Once we were comfortable with the general flow with the lofi wires, we moved on to creating our hifi mockups. This was the first application being built in Salesforce loosely using Salesforce's Lightning Design System, so a style guide was created to ease my design efforts. Since there would be so many different things our booking modification and cancellation tools would need to be able to do, my PM worked with CX leads to craft dozens of different scenarios. The prototypes we built covered those scenarios, even with all of the math working- my experience designing mortgage underwriting applications helped immensely with this step.</p>
+				<p>At this stage, we had just been sent home for the pandemic. There was still a lot of white boarding we needed to do in order for me to understand all the complex calculations happening and for me to run my ideas by my PM. He and I met up at my house about once a week until all our MVP scenarios were covered.</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="left-column">
+				<div data-lightbox="true" class="start-margin-3">
+					<img src={partialrefund} width="100%" alt="Screenshot of creating a Partial Refund in TripAssist" />
+				</div>
+				<p class="img-alt">Screenshot of creating a Partial Refund in TripAssist.</p>
+			</div>
+			<div class="right-column">
+				<h3>Test, Test, Test</h3>
+				<p>For our first round of click-thru testing, we created 6 detailed prototypes- 3 for booking modifications (additions specifically), and 3 for cancellations. Additions are when a guest adds one or more nights or some additional fee to their booking.</p>
+				<p>We tested all our prototypes on 3 RM reps and 3 CARE reps, one new, one veteran, and one lead in each set. We again conducted our tests and took notes in Userzoom, organized our data, and presented everything to management. After this meeting we applied our takeaways to another iteration of my designs. After these updates were made, we did a final round of testing with 3 of the same testers from the last round and 3 new ones. A few smaller changes we made after this round, and we were ready for our first rounds of development.</p>
+				<p>One really neat observation we made during these tests was that our newer CX representatives actually had an easier time getting through the tests than our more veteran reps. We theorized this was because the new designs were very intuitive, but very unlike our current systems. We took that as a major win as the ramp-up period for new employees was a massive pain point we were trying to alleviate.</p>
+
+				<h3>Celebrating Our Successes and Looking Toward the Future</h3>
+				<p>During a company-wide all-hands, we presented a demo of our TripAssist MVP. The reception was excellent, all of CX was incredibly excited, and the CEO was so impressed he wanted to demo it to the board.</p> 
+				<p>After development, rollout started with limited release to specific teams and is now organization-wide for all modifications and cancellations. Unlike every other tool we've release to CX, little to no training was ever required for the initial release or new features. The training team simply makes demos of new features and the reps are good to go.</p>
+				<p>Since our initial release of Additions and Cancellations, we've gone through similar design and testing processes for Reductions (when a guest removes one or more nights from their trip or an optional fee), Date Transfers (when a guest needs to move their check-in and check-out dates, which can result in an addition or reduction), and Partial Refunds (when a CX rep needs to make a hospitality exception that involves manual adjustment to a refund).</p>
+			</div>
+		</section>
+
+		<b class="hr"></b>
+
+		<div class="button-container">
+			<Button
+				href="https://www.figma.com/proto/Eeq7rLfpIwMpoDDO5zioeq/(OLD)-TripAssist?page-id=12%3A51558&type=design&node-id=28-52054&viewport=1201%2C590%2C0.12&t=6J399nC7nA7XUMp7-1&scaling=min-zoom&starting-point-node-id=28%3A52054"
+				target="_blank"
+				text="View Partial Refund prototype"
+			/>
+		</div>
 	</main>
 </Layout>
 
 <style lang="scss">
 	main {
-		max-width: 90ch;
 
 		h1 {
 			font-size: 2.25rem;
@@ -95,7 +194,7 @@ import airlinemask from '/images/airline-mask.jpeg';
 
 	h2 {
 		font-size: 1.75rem;
-		margin-block-start: 1rem;
+		margin-block-start: 2rem;
 		margin-block-end: 1rem;
 	}
 	h3 {
@@ -122,12 +221,47 @@ import airlinemask from '/images/airline-mask.jpeg';
 
 		h2 {
 			font-size: 2rem;
-			margin-block-start: 1.75rem;
+			margin-block-start: 3rem;
 			margin-block-end: 1.25rem;
 		}
 		h3 {
 			margin-block-start: 3rem;
 			font-size: 1.5rem;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		section {
+			display: flex;
+			flex-direction: row;
+
+			.left-column {
+
+				.img-alt:last-of-type {
+					margin-block-end: 0;
+				}
+			}
+		}
+		.left-column {
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			padding-right: 2rem;
+		}
+		.right-column {
+			width: 70ch;
+		}
+
+		p {
+			font-size: 1.125rem;
+		}
+
+		.mindmap-scroll {
+			height: 420px;
+			overflow-y: auto;
+		}
+		.start-margin-3 {
+			margin-top: 3rem;
 		}
 	}
 </style>
