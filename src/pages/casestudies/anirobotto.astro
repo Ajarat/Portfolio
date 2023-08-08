@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Images
+import genrebrowse from '/images/ar-genre-browse.png';
+import homepage from '/images/ar-home-page.png';
+import lightmode from '/images/ar-light-mode.png';
+import search from '/images/ar-search-empty.png';
+import titlepage from '/images/ar-title-page.png';
+---
+
+<Layout title="Pet Project: AniRobotto">
+	<main>
+		<h1>Pet Project: <span class="text-gradient">AniRobotto</span></h1>
+
+		<section>
+			<div class="left-column double-photo">
+				<div>
+					<div data-lightbox="true">
+						<img src={homepage} width="100%" alt="Screenshot of the AniRobotto landing page" class="margin-top-0" />
+					</div>
+					<p class="img-alt">Screenshot of the AniRobotto landing page.</p>
+				</div>
+				<div>
+					<div data-lightbox="true">
+						<img src={titlepage} width="100%" alt="Screenshot of the AniRobotto title page for Revolutionary Girl Utena" class="margin-top-0" />
+					</div>
+					<p class="img-alt">Screenshot of the AniRobotto title page for Revolutionary Girl Utena.</p>
+				</div>
+			</div>
+			<div class="right-column">
+				<h2 class="margin-top-0">The Idea</h2>
+				<p>The motivation behind creating the AniRobotto stemmed from personal struggles in finding quality anime recommendations due to the fragmented nature of content across multiple platforms. Existing platforms like Netflix and Crunchyroll offered limited suggestions, and although a few websites existed, none stood out. The realization that the most valuable recommendations often originate from fellow anime enthusiasts who share similar tastes further drove the desire to develop the app.</p>
+				<p>Collaborating with my developer husband, I introduced the concept of an app that combines a watchlist with personalized recommendations. Intrigued by the idea, he saw an opportunity to delve into machine learning and create a unique platform where users' personal reviews fuel intelligent suggestions.</p>
+				<h3>Making it Work</h3>
+				<p>After thorough research, the decision was made to employ the TMDB API as the primary source for show and movie information, encompassing titles, TMDB user reviews, and genres. In addition to incorporating existing data, we introduced specialized anime genres to enrich the content further, encompassing plot summaries and other pertinent metadata to enhance the user experience.</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="left-column double-photo start-margin-3">
+				<div>
+					<div data-lightbox="true">
+						<img src={genrebrowse} width="100%" alt="Screenshot of the AniRobotto Browse page" />
+					</div>
+					<p class="img-alt">Screenshot of the AniRobotto Browse page.</p>
+				</div>
+				<div>
+					<div data-lightbox="true">
+						<img src={search} width="100%" alt="Screenshot of the AniRobotto Search page" />
+					</div>
+					<p class="img-alt">Screenshot of the AniRobotto Search page.</p>
+				</div>
+			</div>
+			<div class="right-column">
+				<p>Central to the recommendation engine's functionality was the accumulation of a user base for learning purposes. When a user provided reviews for specific titles, this data would be analyzed against all other reviews. By identifying instances where different users assigned high ratings to the same titles, the engine would subsequently suggest additional unrated titles to the user based on the preferences of others who had similarly rated those shows highly.</p>
+				<h3>The App</h3>
+				<p>The landing page design featured top recommendations, one in a hero image format, simplifying the addition of favored content to one's watchlist. Below, the page presented compilations of new releases and standout shows from genres aligned with the user's preferences, creating a browsing experience tailored to individual tastes.</p>
+				<p>The search and browse interfaces offer users a couple of exploration options, enabling searches by title and various metadata attributes of specific content. Users can seamlessly navigate genres with versatile sorting preferences. Within this interface, users have the capability to add titles to their watchlist, provide ratings, and access individual title pages for more details and interaction.</p>
+				<p>Title pages serve as comprehensive hubs for each title, aggregating the metadata sourced from TMDB, encompassing screenshots, marketing visuals, release year, episode count (if relevant), TMDB rating, plot synopsis, creator details, and an array of tags to facilitate nuanced categorization beyond overarching genres. Users are also given the ability to add titles to their watchlist and assigning personal ratings as well.</p>
+			</div>
+		</section>
+
+		<section>
+			<div class="left-column single-photo">
+				<div data-lightbox="true">
+					<img src={lightmode} width="100%" alt="Screenshot of the AniRobotto Browse page in Light Mode" />
+				</div>
+				<p class="img-alt">Screenshot of the AniRobotto Browse page in Light Mode.</p>
+			</div>
+			<div class="right-column">
+				<p class="margin-top-0">The app design also includes light and dark mode versions. The default is dark mode, but can be adjusted by the user in the Account section via App Settings.</p>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style lang="scss">
+	main {
+
+		h1 {
+			font-size: 2.25rem;
+			font-weight: 500;
+			margin-block-start: 0;
+			margin-block-end: 2.5rem;
+		}
+
+		img {
+			margin-top: .5rem;
+		}
+	}
+	.left-column {
+		display: flex;
+
+		&.single-photo {
+			flex-direction: column;
+
+			> div {
+				text-align: center;
+			}
+
+			img {
+				width: 48%;
+			}
+		}
+
+		&.double-photo {
+			flex-direction: row;
+
+			> div {
+
+				&:nth-child(1) {
+					padding-right: .5rem;
+				}
+
+				&:nth-child(2) {
+					padding-left: .5rem;
+				}
+			}
+		}
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem 0 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+		margin-block-start: 2rem;
+		margin-block-end: 1rem;
+	}
+	h3 {
+		margin-block-start: 2rem;
+    	font-size: 1.25rem;
+	}
+	p {
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+		font-size: 1.125rem;
+	}
+
+	@media only screen and (min-width: 768px) {
+
+		main {
+
+			h1 {
+				font-size: 2.75rem;
+			}
+		}
+
+		.button-container {
+			align-items: center;
+		}
+
+		h2 {
+			font-size: 2rem;
+			margin-block-start: 3rem;
+			margin-block-end: 1.25rem;
+		}
+		h3 {
+			margin-block-start: 3rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		section {
+			display: flex;
+			flex-direction: row;
+
+			.left-column {
+
+				.img-alt:last-of-type {
+					margin-block-end: 0;
+				}
+			}
+		}
+		.left-column {
+			flex: 1;
+			padding-right: 2rem;
+
+			&.double-photo {
+
+				> div {
+
+					&:nth-child(1) {
+						padding-right: 1rem;
+					}
+
+					&:nth-child(2) {
+						padding-left: 1rem;
+					}
+				}
+			}
+		}
+		.right-column {
+			width: 70ch;
+		}
+
+		.mindmap-scroll {
+			height: 420px;
+			overflow-y: auto;
+		}
+		.start-margin-3 {
+			margin-top: 3rem;
+		}
+	}
+</style>
