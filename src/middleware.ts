@@ -2,7 +2,7 @@ import { defineMiddleware } from "astro/middleware";
 
 
 const VALID_USERNAME = 'mjc'
-const VALID_PASSWORD = 'designs'
+const VALID_PASSWORD = 'raleigh'
 
 
 export const onRequest = defineMiddleware((context, next) => {
